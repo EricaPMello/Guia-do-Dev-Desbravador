@@ -1,4 +1,3 @@
----
 # Pensamento Crítico: O Olho Treinado do Desbravador para Analisar Mapas (e Dados!) com Ceticismo Inteligente! 👀🤔🔍✅
 
 Olá de novo, Desbravador(a) com a mente aguçada!

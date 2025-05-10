@@ -31,7 +31,7 @@ Em programação, dados podem ser guardados de várias formas. Em Python, por ex
 
     Este é um exemplo de como os dados de uma venda podem ser representados em Python.
 
-    \`\`\`python
+    ```python
     ingredientes_venda = [
         "produto_x",  # Nome do produto
         150.00,       # Preço da venda
@@ -39,7 +39,7 @@ Em programação, dados podem ser guardados de várias formas. Em Python, por ex
         "cliente_a",  # ID do cliente
         "2023-10-27"  # Data da venda
     ]
-    \`\`\`
+    
 
 No código acima, temos uma pequena 'fatia' de dados sobre uma única venda. Várias dessas 'fatias' juntas formam um CONJUNTO de dados!
 Várias dessas 'fatias' juntas formam um CONJUNTO de dados!

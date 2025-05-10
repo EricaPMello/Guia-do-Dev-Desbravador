@@ -49,6 +49,9 @@ jobs:
           echo "Gerando os arquivos do site..."
           bundle exec jekyll build --destination ./site
 
+      - name: Verificar diretório gerado
+        run: ls -la ./site
+
       # Fazer upload do artefato GitHub Pages
       - name: Fazer upload do artefato GitHub Pages
         uses: actions/upload-artifact@v4

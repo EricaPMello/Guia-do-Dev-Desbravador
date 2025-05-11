@@ -45,7 +45,7 @@ jobs:
 
       # Remova o passo 'Verificar diretório gerado' se ele não for necessário.
 
-      # Passo 4: Fazer upload do site construído como um artefato para o deploy
+      # Passo 4: Fazer upload do artefato construído para o deploy
       - name: Fazer upload do artefato do site
         uses: actions/upload-pages-artifact@v3 # Usa a Action oficial para upload de Pages
         with:

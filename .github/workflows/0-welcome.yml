@@ -32,7 +32,7 @@ jobs:
       - name: Configurar Ruby e instalar dependências
         uses: ruby/setup-ruby@v1 # Usa a Action oficial para Ruby
         with:
-          ruby-version: '3.x' # Define uma versão de Ruby compatível (verifique no Gemfile se tiver)
+          ruby-version: '3.3' # Define uma versão de Ruby compatível (verifique no Gemfile se tiver)
           bundler-cache: true # Instala Gems usando Bundler (requer Gemfile.lock)
 
       # Remova completamente o passo 'Configurar arquivos iniciais do site' do seu arquivo!

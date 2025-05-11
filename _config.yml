@@ -1,4 +1,4 @@
 collections:
   mini-books:
     output: true
-      theme: minima
+    theme: minima

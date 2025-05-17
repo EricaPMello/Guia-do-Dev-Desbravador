@@ -9,53 +9,72 @@ on:
       - main
 
 permissions:
+  # Need `contents: read` to checkout the repository.
+  # Need `contents: write` to update the step metadata.
   contents: write
 
 jobs:
+  # Get the current step to only run the main job when the learner is on the same step.
   get_current_step:
     name: Check current step number
     runs-on: ubuntu-latest
-    outputs:
+    outputs: # Define a saída do job
       current_step: ${{ steps.get_step.outputs.current_step }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - id: get_step
-        name: Read step file and set output
+      - id: get_step # ID do passo para referenciar sua saída
+        name: Read step file and set output # Nome descritivo para o passo
         run: |
-          STEP_FILE_PATH="./.github/steps/-step.txt" # Confirme se este é o caminho correto
+          # Define o caminho para o arquivo de passo.
+          # Certifique-se que '.github/steps/-step.txt' é o caminho correto no seu projeto.
+          STEP_FILE_PATH="./.github/steps/-step.txt"
+
+          # Verifica se o arquivo de passo existe.
           if [ -f "$STEP_FILE_PATH" ]; then
-            # Lê o conteúdo do arquivo, remove quaisquer caracteres de nova linha (\n) ou retorno de carro (\r)
+            # Lê o conteúdo do arquivo, remove quaisquer caracteres de nova linha (\n) ou retorno de carro (\r),
+            # e armazena na variável STEP_VALUE.
             STEP_VALUE=$(cat "$STEP_FILE_PATH" | tr -d '\n\r')
-            echo "Valor lido do arquivo de passo (após limpeza): '${STEP_VALUE}'" # Para debug
+            
+            # Imprime o valor lido para fins de debug (visível nos logs da Action).
+            echo "Valor lido do arquivo de passo (após limpeza): '${STEP_VALUE}'"
+            
+            # Define a saída 'current_step' para este passo, que será usada pelo output do job.
             echo "current_step=${STEP_VALUE}" >> $GITHUB_OUTPUT
           else
-            echo "Arquivo de passo não encontrado em $STEP_FILE_PATH" # Para debug
-            echo "current_step=" >> $GITHUB_OUTPUT # Define como vazio se não encontrado
+            # Se o arquivo não for encontrado, imprime uma mensagem de debug.
+            echo "Arquivo de passo não encontrado em $STEP_FILE_PATH"
+            # Define current_step como uma string vazia se o arquivo não for encontrado.
+            echo "current_step=" >> $GITHUB_OUTPUT
           fi
 
   on_merge:
     name: On merge
-    needs: get_current_step
+    needs: get_current_step # Este job depende da conclusão e saída do job 'get_current_step'
+    
+    # Condição para executar este job:
+    # 1. O repositório não é um template.
+    # 2. O passo atual lido pelo 'get_current_step' é '5'.
     if: >-
       ${{ !github.event.repository.is_template
-          && needs.get_current_step.outputs.current_step == '5' }} # Comparar como string
+          && needs.get_current_step.outputs.current_step == '5' }} # Comparação como string é mais segura
+          
     runs-on: ubuntu-latest
     steps:
+      # Faz checkout do código para poder interagir com os arquivos do repositório.
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0 # Busca todo o histórico.
 
+      # Atualiza o passo de 5 para X usando a action 'skills/action-update-step'.
       - name: Update to step X
         uses: skills/action-update-step@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          from_step: '5' # Como string
-          to_step: 'X'   # Como string
+          token: ${{ secrets.GITHUB_TOKEN }} # Token para permitir que a action escreva no repositório.
+          from_step: '5' # O passo de origem (como string).
+          to_step: 'X'   # O passo de destino (como string).
           # ATENÇÃO: Se o seu curso atualiza o README na branch 'main',
           # esta branch_name deveria ser 'main'.
-          # Se 'my-pages' foi usada durante o curso e agora tudo está na 'main',
-          # e o README da 'main' é o que importa, ajuste para 'main'.
-          branch_name: my-pages
+          branch_name: my-pages # Revise esta linha se necessário

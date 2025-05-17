@@ -1,5 +1,6 @@
 ---
 title: Welcome to my blog
+<<<<<<< HEAD
 ---
 
 # Guia do Dev Desbravador 🧭✨📚
@@ -223,3 +224,6 @@ Uma habilidade essencial para desbravar o conhecimento global.
 * **Resumo:** Documento explicando a origem do conteúdo (compilação de dados públicos com foco didático), a metodologia lúdica utilizada e listando fontes de alta credibilidade para aprofundamento, dando os devidos créditos à proponente Érica Mello.
 
 ---
+=======
+---
+>>>>>>> my-pages

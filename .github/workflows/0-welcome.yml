@@ -1,68 +1,71 @@
+# Nome do workflow: Build e Deploy do GitHub Pages
 name: Build e Deploy GitHub Pages
 
+# Define quando o workflow será acionado
 on:
   push:
     branches:
-      - my-pages # Dispara o workflow quando há push na branch my-pages
+      - my-pages # Dispara o workflow quando há push na branch my-pages (ou 'main' se você já fez o merge e ajustou)
 
-# Define permissões para o deploy
+# Define permissões para o token GITHUB_TOKEN usado pelo workflow
 permissions:
-  contents: read # Permite ler o código do repositório
-  pages: write # Permite escrever no repositório de pages (para deploy)
-  id-token: write # Permite autenticação com OIDC para o deploy
+  contents: read    # Permite ler o código do repositório
+  pages: write      # Permite escrever no ambiente do GitHub Pages (para deploy)
+  id-token: write   # Permite autenticação com OIDC para o deploy
 
-# Permite apenas um deploy por vez, cancelando outros que chegarem enquanto um está rodando
+# Configura a concorrência para evitar múltiplos deploys simultâneos
+# Cancela execuções em andamento no mesmo grupo quando uma nova é iniciada
 concurrency:
   group: "pages"
   cancel-in-progress: true
 
+# Define os jobs que serão executados
 jobs:
   # Job para construir o site Jekyll
   build:
-    runs-on: ubuntu-latest # Roda no sistema operacional Ubuntu mais recente
+    runs-on: ubuntu-latest # Define o tipo de máquina virtual para rodar o job
 
     steps:
       # Passo 1: Fazer checkout do código do seu repositório
+      # Esta action baixa o código do seu repositório para a máquina virtual
       - name: Checkout do código
         uses: actions/checkout@v4
 
       # Passo 2: Configurar ambiente Ruby e instalar dependências do Gemfile (se existir)
-      # Este passo substitui o antigo 'Instalar dependências do Jekyll'
-      # Ele instala as Gems no diretório do usuário ou do Bundler Cache, sem erros de permissão
+      # Esta action configura a versão especificada do Ruby e utiliza o cache do Bundler
+      # para acelerar a instalação das gems definidas no Gemfile.lock.
       - name: Configurar Ruby e instalar dependências
-        uses: ruby/setup-ruby@v1 # Usa a Action oficial para Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.3' # Define uma versão de Ruby compatível (verifique no Gemfile se tiver)
-          bundler-cache: true # Instala Gems usando Bundler (requer Gemfile.lock)
-
-      # Remova completamente o passo 'Configurar arquivos iniciais do site' do seu arquivo!
-      # Ele sobrescreve _config.yml e index.md incorretamente.
+          ruby-version: '3.3'   # Define a versão do Ruby a ser usada. Verifique se é compatível com seu Gemfile.
+          bundler-cache: true   # Habilita o cache do Bundler. Requer Gemfile.lock no repositório.
 
       # Passo 3: Construir o site Jekyll
-      # Este passo substitui o antigo 'Gerar o site estático'
+      # Este comando executa o build do Jekyll, gerando os arquivos estáticos do site.
+      # A flag --destination especifica o diretório de saída para os arquivos construídos.
       - name: Construir site Jekyll
         run: |
-          bundle exec jekyll build --destination ./site # Constrói o site na pasta ./site
-
-      # Remova o passo 'Verificar diretório gerado' se ele não for necessário.
+          bundle exec jekyll build --destination ./site
 
       # Passo 4: Fazer upload do site construído como um artefato para o deploy
+      # Esta action faz o upload do diretório do site construído (./site) como um artefato.
+      # Este artefato será usado pelo job de deploy.
       - name: Fazer upload do artefato do site
-        uses: actions/upload-pages-artifact@v3 # Usa a Action oficial para upload de Pages
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: ./site # Envia a pasta onde o site foi construído
+          path: ./site # Caminho para o diretório que contém os arquivos do site construído
 
-
-  # Job para fazer o deploy do site
+  # Job para fazer o deploy do site no GitHub Pages
   deploy:
     environment:
-      name: github-pages # Usa o ambiente especial do GitHub Pages
-      url: ${{ steps.deployment.outputs.page_url }} # Pega a URL do site após deploy
-    runs-on: ubuntu-latest # Roda no Ubuntu mais recente
-    needs: build # Este Job só roda depois que o Job 'build' terminar com sucesso
+      name: github-pages # Define o ambiente de deploy para GitHub Pages
+      url: ${{ steps.deployment.outputs.page_url }} # Define a URL de saída do deploy
+    runs-on: ubuntu-latest # Define o tipo de máquina virtual para rodar o job
+    needs: build # Especifica que este job só roda após o job 'build' ser concluído com sucesso
 
     steps:
       # Passo 1: Fazer o deploy do artefato construído para o GitHub Pages
+      # Esta action pega o artefato carregado pelo job de build e o implanta no GitHub Pages.
       - name: Fazer deploy para GitHub Pages
-        id: deployment # ID para pegar a URL de saída
-        uses: actions/deploy-pages@v4 # Usa a Action oficial para deploy de Pages
+        id: deployment # Define um ID para este passo, permitindo referenciar suas saídas (como page_url)
+        uses: actions/deploy-pages@v4

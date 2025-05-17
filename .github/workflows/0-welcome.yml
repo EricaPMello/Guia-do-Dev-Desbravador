@@ -5,7 +5,7 @@ name: Build e Deploy GitHub Pages
 on:
   push:
     branches:
-      - my-pages # Dispara o workflow quando há push na branch my-pages (ou 'main' se você já fez o merge e ajustou)
+      - main # Dispara o workflow quando há push na branch my-pages (ou 'main' se você já fez o merge e ajustou)
 
 # Define permissões para o token GITHUB_TOKEN usado pelo workflow
 permissions:

@@ -1,7 +1,4 @@
----
-title: Welcome to my blog
-<<<<<<< HEAD
----
+
 
 # Guia do Dev Desbravador 🧭✨📚
 

@@ -28,8 +28,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - id: get_step
-        run: |
-          echo "current_step=$(cat ./.github/steps/-step.txt)" >> $GITHUB_OUTPUT
+  run: |
+    if [ -f ./.github/steps/-step.txt ]; then
+      step=$(cat ./.github/steps/-step.txt | tr -d '\n\r ')
+      echo "current_step=${step}" >> $GITHUB_OUTPUT
+    else
+      echo "Arquivo de passo não encontrado." >&2
+      exit 1
+    fi
     outputs:
       current_step: ${{ steps.get_step.outputs.current_step }}
 

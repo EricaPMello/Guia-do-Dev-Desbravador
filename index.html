@@ -5,46 +5,124 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Guia do Dev Desbravador</title>
     <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f8f8fa;
-    }
-    .minilivro {
-      max-width: 700px;
-      margin: 24px auto;
-      padding: 20px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-      font-size: 1.1em;
-    }
-    @media (max-width: 800px) {
-      .minilivro {
-        max-width: 98vw;
-        margin: 10px 1vw;
-        padding: 12px;
-        font-size: 1em;
-      }
-    }
-    @media (max-width: 480px) {
-      .minilivro {
-        max-width: 100vw;
-        margin: 0;
-        border-radius: 0;
-        padding: 6vw 2vw;
-        font-size: 0.98em;
-      }
-      h1, h2, h3, h4 {
-        font-size: 1.1em;
-      }
-      pre, code {
-        font-size: 0.90em;
-        white-space: pre-wrap;
-        word-break: break-all;
-      }
-    }
-  </style>
+body {
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  background: linear-gradient(120deg, #f4f6fa 0%, #fbeee0 100%);
+  margin: 0;
+  padding: 0;
+}
+.titulo-site, h1 {
+  text-align: center;
+  color: #243b55;
+  margin-top: 32px;
+  font-size: 2.1em;
+  letter-spacing: 1px;
+}
+.minilivro {
+  max-width: 720px;
+  margin: 40px auto 48px auto;
+  padding: 32px 20px 24px 20px;
+  background: linear-gradient(105deg, #fff8f0 60%, #e0f7fa 100%);
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(33, 50, 84, 0.13);
+  border: 2px solid #ffe0b2;
+  position: relative;
+  transition: box-shadow 0.3s;
+}
+.minilivro:hover {
+  box-shadow: 0 10px 40px rgba(33, 50, 84, 0.22);
+}
+.minilivro h2, .minilivro h3, .minilivro h4 {
+  color: #ff9800;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  font-family: 'Segoe UI Semibold', 'Arial', sans-serif;
+}
+.minilivro h2 { font-size: 1.7em; }
+.minilivro h3 { font-size: 1.25em; }
+.minilivro h4 { font-size: 1.12em; color: #3ec6e0; }
+
+.minilivro ul, .minilivro ol {
+  background: #fffde7;
+  border-radius: 7px;
+  padding: 16px 20px;
+  margin: 16px 0 16px 0;
+  box-shadow: 0 1px 4px rgba(255, 152, 0, 0.05);
+}
+
+.minilivro blockquote {
+  border-left: 5px solid #3ec6e0;
+  background: #e0f7fa;
+  color: #37474f;
+  font-style: italic;
+  margin: 22px 0;
+  padding: 16px 24px;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 0 2px 8px rgba(62,198,224,0.06);
+}
+
+.minilivro pre, .minilivro code {
+  background: #f4f4f4;
+  color: #37474f;
+  border-radius: 6px;
+  font-size: 1em;
+  padding: 12px;
+  overflow-x: auto;
+  margin: 18px 0;
+  font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
+}
+.minilivro code {
+  padding: 3px 7px;
+  background: #fffde7;
+  border: 1px solid #ffe0b2;
+  color: #ff9800;
+}
+.minilivro pre code {
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 0;
+}
+
+.minilivro hr {
+  border: none;
+  border-top: 2px dashed #ff9800;
+  margin: 36px 0 36px 0;
+}
+
+.minilivro img, .minilivro svg {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 18px 0 18px 0;
+  box-shadow: 0 2px 8px rgba(62,198,224,0.08);
+}
+
+@media (max-width: 850px) {
+  .minilivro {
+    max-width: 98vw;
+    padding: 18px 3vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .minilivro {
+    padding: 10vw 2vw;
+    margin: 14vw 0 14vw 0;
+    border-radius: 0;
+  }
+  .minilivro h2 { font-size: 1.18em; }
+  .minilivro h3 { font-size: 1.06em; }
+}
+
+.separador-livro {
+  width: 80px;
+  height: 10px;
+  background: linear-gradient(90deg, #ff9800 0%, #3ec6e0 100%);
+  margin: 60px auto 60px auto;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(62,198,224,0.15);
+}
+</style>
 </head>
 <body>
 <h1>Guia do Dev Desbravador 🧭✨📚</h1>

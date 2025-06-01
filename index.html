@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Guia do Dev Desbravador</title>
-    <style>
+  <style>
 body {
   font-family: 'Segoe UI', 'Arial', sans-serif;
   background: linear-gradient(120deg, #f4f6fa 0%, #fbeee0 100%);
@@ -122,9 +122,150 @@ body {
   border-radius: 12px;
   box-shadow: 0 1px 6px rgba(62,198,224,0.15);
 }
-</style>
+
+/* --- CSS adicional para o Sumário --- */
+#sumario-container {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#sumario-btn {
+  background: linear-gradient(90deg, #ff9800 0%, #3ec6e0 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 8px 22px;
+  font-size: 1.08em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(33,50,84,0.18);
+  margin-bottom: 6px;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+#sumario-btn:hover {
+  background: linear-gradient(90deg, #3ec6e0 0%, #ff9800 100%);
+  box-shadow: 0 4px 16px rgba(33,50,84,0.20);
+}
+#sumario-box {
+  display: none;
+  background: #fff8f0;
+  border: 2px solid #ffe0b2;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(33,50,84,0.13);
+  padding: 22px 26px 18px 22px;
+  min-width: 280px;
+  max-height: 70vh;
+  overflow-y: auto;
+  margin-top: 6px;
+  animation: aparecerSumario 0.17s;
+}
+@keyframes aparecerSumario {
+  from { opacity: 0; transform: scale(0.97);}
+  to   { opacity: 1; transform: scale(1);}
+}
+#sumario-box h2 {
+  margin-top: 0;
+  color: #ff9800;
+  font-size: 1.11em;
+  letter-spacing: 1px;
+}
+#sumario-box ul {
+  margin: 0;
+  padding-left: 17px;
+  list-style: none;
+}
+#sumario-box li {
+  margin-bottom: 7px;
+}
+#sumario-box a {
+  color: #243b55;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.17s;
+}
+#sumario-box a:hover {
+  color: #3ec6e0;
+  text-decoration: underline;
+}
+  </style>
 </head>
 <body>
+<!-- Sumário flutuante -->
+<div id="sumario-container">
+  <button id="sumario-btn">Sumário</button>
+  <div id="sumario-box">
+    <h2>Sumário</h2>
+    <ul>
+      <li><a href="#mini01">01 - Dados e Analytics</a></li>
+      <li><a href="#mini02">02 - Visão Analítica</a></li>
+      <li><a href="#mini03">03 - Pensamento Crítico</a></li>
+      <li><a href="#mini04">04 - Resolução de Problemas</a></li>
+      <li><a href="#mini05">05 - Conhecimento de Negócios</a></li>
+      <li><a href="#mini06">06 - OKRs</a></li>
+      <li><a href="#mini07">07 - Algoritmos</a></li>
+      <li><a href="#mini08">08 - Python</a></li>
+      <li><a href="#mini09">09 - venv</a></li>
+      <li><a href="#mini10">10 - Pandas</a></li>
+      <li><a href="#mini11">11 - SQL</a></li>
+      <li><a href="#mini12">12 - Banco de Dados</a></li>
+      <li><a href="#mini13">13 - Excel para Analistas de Dados</a></li>
+      <li><a href="#mini14">14 - Estatística</a></li>
+      <li><a href="#mini15">15 - Estatística Avançada</a></li>
+      <li><a href="#mini16">16 - Análise de Indicadores (KPIs)</a></li>
+      <li><a href="#mini17">17 - Análise Exploratória de Dados (EDA)</a></li>
+      <li><a href="#mini18">18 - Visualização de Dados</a></li>
+      <li><a href="#mini19">19 - Visualização Avançada</a></li>
+      <li><a href="#mini20">20 - HTML e CSS para Insights Visuais no Setor Bancário</a></li>
+      <li><a href="#mini21">21 - Comunicação</a></li>
+      <li><a href="#mini22">22 - Storytelling com Dados</a></li>
+      <li><a href="#mini23">23 - Computação em Nuvem</a></li>
+      <li><a href="#mini24">24 - AWS S3</a></li>
+      <li><a href="#mini25">25 - Google Analytics</a></li>
+      <li><a href="#mini26">26 - Extração de Dados</a></li>
+      <li><a href="#mini27">27 - AWS Athena</a></li>
+      <li><a href="#mini28">28 - Workflow com AWS Athena</a></li>
+      <li><a href="#mini29">29 - AWS Glue</a></li>
+      <li><a href="#mini30">30 - AWS Glue DataBrew</a></li>
+      <li><a href="#mini31">31 - Amazon QuickSight</a></li>
+      <li><a href="#mini32">32 - Big Data</a></li>
+      <li><a href="#mini33">33 - Apache Hadoop</a></li>
+      <li><a href="#mini34">34 - Apache Spark</a></li>
+      <li><a href="#mini35">35 - Apache Kafka</a></li>
+      <li><a href="#mini36">36 - Modelagem de Dados</a></li>
+      <li><a href="#mini37">37 - PowerDesigner</a></li>
+      <li><a href="#mini38">38 - ETL e ELT</a></li>
+      <li><a href="#mini39">39 - Data Warehouses</a></li>
+      <li><a href="#mini40">40 - Engenharia de Analytics</a></li>
+      <li><a href="#mini41">41 - Automação</a></li>
+      <li><a href="#mini42">42 - Arquitetura de Automação</a></li>
+      <li><a href="#mini43">43 - Arquiteturas de Dados</a></li>
+      <li><a href="#mini44">44 - Data Mesh</a></li>
+      <li><a href="#mini45">45 - Containers para Desenvolvedores</a></li>
+      <li><a href="#mini46">46 - Machine Learning</a></li>
+      <li><a href="#mini47">47 - Machine Learning Avançado</a></li>
+      <li><a href="#mini48">48 - AI na Jornada</a></li>
+      <li><a href="#mini49">49 - GitHub</a></li>
+      <li><a href="#mini50">50 - GitLab</a></li>
+      <li><a href="#mini51">51 - R</a></li>
+      <li><a href="#mini52">52 - Scala</a></li>
+      <li><a href="#mini53">53 - Julia</a></li>
+      <li><a href="#mini54">54 - Otimização Python</a></li>
+      <li><a href="#mini55">55 - Apptio Cloudability</a></li>
+      <li><a href="#mini56">56 - Bibliotecas</a></li>
+      <li><a href="#mini57">57 - Ética em Dados</a></li>
+      <li><a href="#mini58">58 - Governança de Dados</a></li>
+      <li><a href="#mini59">59 - Inglês Tech</a></li>
+      <li><a href="#mini60">60 - Projetos Práticos</a></li>
+      <li><a href="#glossario">Glossário</a></li>
+      <li><a href="#referencias">Referências e Metodologia</a></li>
+    </ul>
+  </div>
+</div>
+<!-- Fim do sumário flutuante -->
 <h1>Guia do Dev Desbravador 🧭✨📚</h1>
 
 <p>Olá, futuros Desbravadores e Desbravadoras do Universo de Dados! 👋</p>
@@ -1471,3 +1612,29 @@ pip install pandas==2.0.3 scikit-learn==1.3.0
 pip freeze > requirements.txt # Cria o arquivo na pasta do projeto
 deactivate</code></pre
 
+
+      <body>
+  <!-- ... Seu conteúdo, mini-livros, etc ... -->
+
+  <!-- (Aqui termina o último mini-livro ou conteúdo principal) -->
+
+  <!-- Script do Sumário flutuante -->
+  <script>
+    const btn = document.getElementById('sumario-btn');
+    const box = document.getElementById('sumario-box');
+    btn.onclick = function() {
+      if (box.style.display === 'block') {
+        box.style.display = 'none';
+      } else {
+        box.style.display = 'block';
+      }
+    };
+    // Fecha o sumário ao clicar fora dele:
+    document.addEventListener('click', function(e) {
+      if (!btn.contains(e.target) && !box.contains(e.target)) {
+        box.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

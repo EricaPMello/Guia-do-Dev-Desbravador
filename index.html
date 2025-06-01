@@ -949,3 +949,129 @@ decidir_proxima_passo(insights_iniciais, previsoes)
   </ul>
   <p><b>Continue usando sua bússola OKR para garantir que sua jornada de dados esteja sempre alinhada com a Missão Principal da Guilda, Desbravador(a)! 💪</b></p>
 </div>
+
+<div class="minilivro" id="mini07">
+  <h2>Algoritmos: As Receitas Secretas do Desbravador para Resolver Problemas com Dados 📜🕵️‍♀️</h2>
+  <p><strong>E aí, Desbravador(a)! Bem-vindo(a) de volta à nossa jornada!</strong></p>
+  <p>Você já tem um kit de ferramentas incrível: sabe onde encontrar os ingredientes (dados com SQL 🔑), tem a oficina (Python 🐍), a bancada para preparar tudo (Pandas 🐼), e ferramentas para explorar e entender o que tem ali (EDA 🧭📊, Estatística 🔬🔮, Visualização 🗺️📈).</p>
+  <p>Mas como você realmente faz as coisas? Como a oficina sabe o que fazer com os ingredientes?</p>
+  <p>A resposta está nos <strong>Algoritmos</strong>!</p>
+  <p>Pense em um algoritmo como uma receita de bolo 🍰. É um conjunto de instruções passo a passo, bem definidas, que você segue para transformar ingredientes (dados de entrada) em um resultado final (o bolo, a resposta para um problema, um insight).</p>
+  
+  <h3>O Que é um Algoritmo? O Guia Passo a Passo! 📝</h3>
+  <p>Em termos simples, um Algoritmo é um conjunto finito de regras ou instruções que descreve como realizar uma tarefa ou resolver um problema.</p>
+  <ul>
+    <li><b>Passos Finitos:</b> Tem um começo e um fim.</li>
+    <li><b>Bem Definido:</b> Cada passo é claro e não deixa dúvidas.</li>
+    <li><b>Entrada (Input):</b> O que você precisa para começar (os ingredientes, os dados brutos).</li>
+    <li><b>Saída (Output):</b> O resultado final (o bolo, a resposta).</li>
+    <li><b>Efetivo:</b> Cada passo deve ser simples o suficiente para ser realizado (por uma pessoa ou computador).</li>
+  </ul>
+  <blockquote>
+    <b>Analogie:</b> Se os Dados são os INGREDIENTES 🥕🥚🥛, o PYTHON (ou outra linguagem) é a COZINHA/FORNO 🏭, o ALGORITMO é a RECEITA DETALHADA 📜 que te diz exatamente como usar a cozinha para transformar aqueles ingredientes em um bolo delicioso (um resultado útil)!<br>
+    <b>Gatilho Mental:</b> ALGORITMO = RECEITA SECRETA (ou nem tão secreta!) para resolver um problema passo a passo 📜.
+  </blockquote>
+  
+  <h3>Algoritmos no Mundo dos Dados: As Receitas da Análise! 🕵️‍♀️</h3>
+  <ul>
+    <li>Quando você limpa dados no Pandas, está seguindo algoritmos (ex: o algoritmo para encontrar e remover linhas duplicadas).</li>
+    <li>Quando você calcula a média de uma coluna, está usando um algoritmo (somar tudo e dividir pela contagem).</li>
+    <li>Quando você visualiza dados, há algoritmos por trás desenhando os pontos, linhas e barras.</li>
+    <li>E, crucialmente, quando você constrói Modelos de Machine Learning, você está usando algoritmos avançados que aprendem com seus dados!</li>
+  </ul>
+  <blockquote>
+    <b>Analogie:</b> Algoritmos são as diferentes técnicas de culinária ou receitas específicas (fritar, assar, ferver, bater) que você aplica aos seus ingredientes (dados) na cozinha (Python) para alcançar resultados diferentes (análise, modelo, visualização).
+  </blockquote>
+  
+  <h3>Nossas Primeiras Receitas Simples (com Pitadas de Python!) 🍰</h3>
+  <h4>Receita 1: Encontrar o Maior Tesouro em uma Lista 🏆</h4>
+  <p><b>Problema:</b> Dada uma lista de valores de tesouros encontrados, qual o maior valor?</p>
+  <b>Algoritmo (Passo a Passo):</b>
+  <ol>
+    <li>Pegue o primeiro valor da lista e chame ele de "maior_valor_encontrado_ate_agora".</li>
+    <li>Para cada um dos outros valores na lista, um por um:
+      <ul>
+        <li>a. Compare o valor atual com o "maior_valor_encontrado_ate_agora".</li>
+        <li>b. Se o valor atual for MAIOR do que o "maior_valor_encontrado_ate_agora", atualize o "maior_valor_encontrado_ate_agora" para ser este novo valor maior.</li>
+      </ul>
+    </li>
+    <li>Depois de verificar todos os valores na lista, o valor armazenado em "maior_valor_encontrado_ate_agora" é o maior valor na lista inteira.</li>
+  </ol>
+  <p><i>Como isso se parece em Conceitos Python?</i></p>
+  <pre><code>
+valores_tesouro = [100, 500, 150, 1000, 75]
+maior_valor_encontrado_ate_agora = valores_tesouro[0]
+for valor_atual in valores_tesouro[1:]:
+    if valor_atual > maior_valor_encontrado_ate_agora:
+        maior_valor_encontrado_ate_agora = valor_atual
+print(f"A lista de tesouros é: {valores_tesouro}")
+print(f"O maior tesouro encontrado é: {maior_valor_encontrado_ate_agora}")
+# Saída: O maior tesouro encontrado é: 1000
+</code></pre>
+  <p>Nota: Python tem uma função pronta <code>max()</code> que faz isso para você! Mas entender o algoritmo por trás te ajuda a resolver problemas mais complexos.</p>
+  
+  <h4>Receita 2: Calcular a Média (Já Vimos!) 📊</h4>
+  <p><b>Problema:</b> Dada uma lista de números, calcular a média.</p>
+  <b>Algoritmo:</b>
+  <ol>
+    <li>Some todos os números da lista.</li>
+    <li>Conte quantos números existem na lista.</li>
+    <li>Divida o resultado da soma pelo resultado da contagem.</li>
+  </ol>
+  <pre><code>
+lista_de_numeros = [10, 20, 30, 40, 50]
+soma_total = sum(lista_de_numeros)
+quantidade_de_numeros = len(lista_de_numeros)
+media = soma_total / quantidade_de_numeros
+print(f"A lista de números é: {lista_de_numeros}")
+print(f"A média é: {media}") # Saída: A média é: 30.0
+</code></pre>
+  
+  <h3>Algoritmo vs. Código: A Receita vs. a Execução na Cozinha! 📜👨‍🍳</h3>
+  <ul>
+    <li><b>Algoritmo:</b> É a IDEIA, o PLANO, a SEQUÊNCIA LÓGICA para resolver o problema. É a receita escrita no papel.</li>
+    <li><b>Código:</b> É a IMPLEMENTAÇÃO desse algoritmo em uma linguagem de programação específica (Python, SQL, etc.). É você seguindo a receita e executando os passos na sua cozinha, usando seus utensílios.</li>
+    <li>Um mesmo algoritmo pode ser implementado em diferentes linguagens de código!</li>
+  </ul>
+  
+  <h3>Eficiência: Receitas Rápidas ou Lentas? ⏱️🐌</h3>
+  <ul>
+    <li><b>Algoritmos Eficientes:</b> Resolvem o problema rapidamente, mesmo com muitos dados.</li>
+    <li><b>Algoritmos Menos Eficientes:</b> Podem ficar muito lentos ou travar o computador com muitos dados.</li>
+  </ul>
+  <blockquote>
+    <b>Analogia:</b> É como ter duas receitas para fazer cookies para 1000 pessoas. Uma receita diz para assar um cookie por vez (muito lenta!). Outra diz para assar 50 cookies de uma vez (muito mais eficiente!). A segunda receita (algoritmo) é melhor para grandes quantidades.
+  </blockquote>
+  <p>Em ciência da computação, usamos uma notação chamada "Big O" para descrever a eficiência dos algoritmos em relação ao tamanho da entrada de dados.</p>
+  
+  <h3>Algoritmos: A Base da Inteligência (Machine Learning)! 🧠</h3>
+  <ul>
+    <li>O Algoritmo de Regressão Linear tem passos definidos para encontrar a "melhor linha" que se ajusta aos dados.</li>
+    <li>O Algoritmo de Árvore de Decisão tem passos para encontrar as melhores "perguntas" a fazer sobre os dados para dividi-los em grupos.</li>
+    <li>Algoritmos de Redes Neurais envolvem muitos cálculos e passos interconectados.</li>
+  </ul>
+  <p>Entender a ideia de algoritmos te ajuda a entender como esses modelos "pensam" ou "aprendem".</p>
+  
+  <h4>Um Caso de Uso do Mundo Real: O Algoritmo de Recomendação! 🎁🤝</h4>
+  <ul>
+    <li>Pegue os dados de um usuário (filmes que viu, produtos que comprou).</li>
+    <li>Encontre outros usuários com gostos similares (algoritmos de similaridade).</li>
+    <li>Veja o que esses usuários similares gostaram mas o usuário atual ainda não viu/comprou.</li>
+    <li>Recomende esses itens para o usuário.</li>
+  </ul>
+  <p>Parece simples, mas por baixo há algoritmos complexos comparando milhões de usuários e itens rapidamente!</p>
+  
+  <h3>Recapitulando as Receitas Secretas! 🧠📜🕵️‍♀️</h3>
+  <ul>
+    <li><b>Algoritmo:</b> Uma receita/guia passo a passo para resolver um problema.</li>
+    <li><b>Características:</b> Finito, claro, tem entrada e saída, efetivo.</li>
+    <li><b>Onde usar?</b> Limpeza, cálculo, busca, ordenação e, especialmente, Machine Learning.</li>
+    <li><b>Algoritmo vs. Código:</b> A ideia (receita) vs. A implementação (na cozinha Python).</li>
+    <li><b>Eficiência:</b> Quão rápida e "econômica" é a receita para grandes quantidades de dados.</li>
+    <li><b>Base para ML:</b> Modelos de aprendizado são algoritmos complexos.</li>
+  </ul>
+  
+  <h3>Próximas Descobertas no Livro de Receitas... 🗺️</h3>
+  <p>Com a ideia de algoritmos em mente, estamos prontos para ver como essas "receitas" são usadas para fazer computadores "aprenderem" com dados. O próximo passo lógico é mergulhar no mundo do Machine Learning!</p>
+  <p><b>Prepare-se para ver como os algoritmos ganham vida e aprendem a encontrar tesouros por conta própria! 💪</b></p>
+</div>

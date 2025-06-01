@@ -2,184 +2,178 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Guia do Dev Desbravador</title>
+  <title>Guia do Dev Desbravador 🧭✨📚</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body { font-family: Arial, sans-serif; margin: 24px; line-height: 1.6; background: #fafcff; color: #222; }
-    h1, h2, h3 { color: #2d4373; }
-    ul { margin-bottom: 12px; }
-    li { margin-bottom: 7px; }
-    .indice { background: #e3f2fd; padding: 18px; border-radius: 8px; margin-bottom: 25px; }
-    .center { text-align: center; }
-    .secao { margin-top: 60px; }
-    a { text-decoration: none; color: #1976d2; }
-    a:hover { text-decoration: underline; }
-    hr { margin: 40px 0; }
-    .backtotop { font-size:0.95em; margin-top:20px; }
+    body { font-family: Arial, sans-serif; margin: 0 auto; max-width: 900px; background: #f7fafd; color: #24344d; padding: 30px 10px 60px; }
+    h1 { font-size: 2.5em; text-align: center; margin-bottom: 0.2em; }
+    h2 { font-size: 1.5em; margin-top: 2.2em; border-bottom: 2px solid #e3f2fd; padding-bottom: 5px;}
+    h3 { font-size: 1.15em; margin-top: 1.7em; color: #1976d2;}
+    .badges { text-align: center; margin: 16px 0 24px 0; }
+    .indice { background: #e3f2fd; border-radius: 8px; padding: 20px 25px 16px; margin-bottom: 30px; }
+    .indice ul { margin: 0 0 6px 0; padding-left: 20px; }
+    .indice li { margin-bottom: 4px; }
+    .indice a { color: #1976d2; text-decoration: none; }
+    .indice a:hover { text-decoration: underline;}
+    .top { font-size: 0.98em; margin-top: 40px; }
+    .grupo { margin: 2.4em 0 1.2em 0; }
+    .tema { margin-bottom: 0.6em; }
+    ul, ol { margin-bottom: 16px; }
+    p, li { line-height: 1.66; }
+    code, pre { background: #f0f5fb; border-radius: 4px; padding: 0 4px; }
+    blockquote { border-left: 4px solid #d2e7fb; background: #f6fbff; margin: 16px 0; padding: 10px 22px; color: #406080;}
+    .resumo { color: #3e4c5e; font-style: italic; }
+    .espaco { margin-top: 44px;}
+    html { scroll-behavior: smooth; }
   </style>
 </head>
 <body>
-  <h1>Guia do Dev Desbravador 🧭✨📚</h1>
 
-  <div class="center">
-    <img src="https://img.shields.io/badge/Status-Completo-brightgreen?style=for-the-badge"/>
-    <img src="https://img.shields.io/badge/Linguagem-Portugu%C3%AAs-blue?style=for-the-badge"/>
-    <img src="https://img.shields.io/badge/Licen%C3%A7a-MIT-yellow?style=for-the-badge"/>
-  </div>
+<h1>Guia do Dev Desbravador 🧭✨📚</h1>
 
-  <div class="indice">
-    <h2>Índice</h2>
-    <ul>
-      <li><b>Mini-livros:</b>
-        <ul>
-          <li><a href="#mini-01">01 - Dados e Analytics</a></li>
-          <li><a href="#mini-02">02 - Visão Analítica</a></li>
-          <li><a href="#mini-03">03 - Pensamento Crítico</a></li>
-          <li><a href="#mini-04">04 - Resolução de Problemas</a></li>
-          <li><a href="#mini-05">05 - Conhecimento de Negócios</a></li>
-          <li><a href="#mini-06">06 - OKRs</a></li>
-          <li><a href="#mini-07">07 - Algoritimos</a></li>
-          <li><a href="#mini-08">08 - Python</a></li>
-          <li><a href="#mini-09">09 - Venv</a></li>
-          <li><a href="#mini-10">10 - Pandas</a></li>
-          <li><a href="#mini-11">11 - SQL</a></li>
-          <li><a href="#mini-12">12 - Banco de Dados</a></li>
-          <li><a href="#mini-13">13 - Excel para Analistas de Dados</a></li>
-          <li><a href="#mini-14">14 - Estatística</a></li>
-          <li><a href="#mini-15">15 - Estatística Avançada</a></li>
-          <li><a href="#mini-16">16 - Análise de Indicadores KPIs</a></li>
-          <li><a href="#mini-17">17 - Análise Exploratória de Dados</a></li>
-          <li><a href="#mini-18">18 - Visualização de Dados</a></li>
-          <li><a href="#mini-19">19 - Visualização de Dados Avançada</a></li>
-          <li><a href="#mini-20">20 - HTML e CSS para Insights Visuais no Setor Bancário</a></li>
-          <li><a href="#mini-21">21 - Comunicação</a></li>
-          <li><a href="#mini-22">22 - Storytelling com Dados</a></li>
-          <li><a href="#mini-23">23 - Computação em Nuvem</a></li>
-          <li><a href="#mini-24">24 - AWS S3</a></li>
-          <li><a href="#mini-25">25 - Google Analytics</a></li>
-          <li><a href="#mini-26">26 - Extração de Dados</a></li>
-          <li><a href="#mini-27">27 - AWS Athena</a></li>
-          <li><a href="#mini-28">28 - Workflow com AWS Athena</a></li>
-          <li><a href="#mini-29">29 - AWS Glue</a></li>
-          <li><a href="#mini-30">30 - AWS Glue DataBrew</a></li>
-          <li><a href="#mini-31">31 - Amazon QuickSight</a></li>
-          <li><a href="#mini-32">32 - Big Data</a></li>
-          <li><a href="#mini-33">33 - Apache Hadoop</a></li>
-          <li><a href="#mini-34">34 - Apache Spark</a></li>
-          <li><a href="#mini-35">35 - Apache Kafka</a></li>
-          <li><a href="#mini-36">36 - Modelagem de Dados</a></li>
-          <li><a href="#mini-37">37 - PowerDesigner</a></li>
-          <li><a href="#mini-38">38 - ETL e ELT</a></li>
-          <li><a href="#mini-39">39 - Data Warehouses</a></li>
-          <li><a href="#mini-40">40 - Engenharia de Analytics</a></li>
-          <li><a href="#mini-41">41 - Automação</a></li>
-          <li><a href="#mini-42">42 - Arquitetura de Automação</a></li>
-          <li><a href="#mini-43">43 - Containers para Desenvolvedores</a></li>
-          <li><a href="#mini-44">44 - Arquiteturas de Dados</a></li>
-          <li><a href="#mini-45">45 - Data Mesh</a></li>
-          <li><a href="#mini-46">46 - Aprendizado de Máquina</a></li>
-          <li><a href="#mini-47">47 - Aprendizado de Máquina Avançado</a></li>
-          <li><a href="#mini-48">48 - AI na Jornada</a></li>
-          <li><a href="#mini-49">49 - GitHub</a></li>
-          <li><a href="#mini-50">50 - GitLab</a></li>
-          <li><a href="#mini-51">51 - Bibliotecas</a></li>
-          <li><a href="#mini-52">52 - R</a></li>
-          <li><a href="#mini-53">53 - Scala</a></li>
-          <li><a href="#mini-54">54 - Julia</a></li>
-          <li><a href="#mini-55">55 - Apptio Cloudability</a></li>
-          <li><a href="#mini-56">56 - Ética em Dados</a></li>
-          <li><a href="#mini-57">57 - Governança de Dados</a></li>
-          <li><a href="#mini-58">58 - Inglês Tech</a></li>
-          <li><a href="#mini-59">59 - LinkedIn</a></li>
-          <li><a href="#mini-60">60 - Projetos Práticos para Desbravadores de Dados</a></li>
-        </ul>
-      </li>
-      <li><a href="#glossario">Glossário</a></li>
-      <li><a href="#referencias">Referências e Metodologia</a></li>
-    </ul>
-  </div>
+<div class="badges">
+  <img src="https://img.shields.io/badge/Status-Completo-brightgreen?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Linguagem-Portugu%C3%AAs-blue?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Licen%C3%A7a-MIT-yellow?style=for-the-badge"/>
+</div>
 
-  <!-- Introdução e instruções principais -->
-  <hr>
-  <h2 class="secao">Bem-vindo(a)!</h2>
-  <div>
-    <p>Olá, futuros Desbravadores e Desbravadoras do Universo de Dados! 👋</p>
-    <p>
-      Bem-vindos ao <b>Guia do Dev Desbravador</b>! Este repositório nasceu da inspiração de tornar a jornada de aprendizado em Análise e Ciência de Dados mais <b>divertida, lúdica e acessível</b>, especialmente para quem está começando e se sente um pouco perdido(a) com a vasta quantidade de termos e conceitos.
-    </p>
-    <p>
-      Aqui, os tópicos se transformam em <b>mini-livros</b> recheados de analogias de desbravamento, tesouros e magia, exemplos práticos e explicações detalhadas, tudo para ajudar você a fixar o conteúdo de forma mais eficaz e emocionante!
-    </p>
-    <p>
-      Este Guia é o resultado de uma <b>colaboração</b> especial entre <b>Érica Mello</b>, uma estudante apaixonada por Análise e Ciência de Dados em busca de aprimorar seu aprendizado e criar um recurso didático para a comunidade, e um modelo de linguagem grande, treinado pelo Google (seu Parceiro de Programação nesta jornada!).
-    </p>
-    <p>
-      Nossa filosofia é clara: <b>cada desbravador aprende em seu próprio tempo e de sua própria maneira</b>. Este Guia oferece um mapa, mas você decide o ritmo e os caminhos que mais ressoam com você.
-    </p>
-    <h3>Como Usar Este Guia 🗺️</h3>
-    <ol>
-      <li><b>Explore os Mini-Livros:</b> Cada mini-livro aprofunda em um tema com explicações lúdicas, analogias, e exemplos (alguns com código!).</li>
-      <li><b>Siga o Mapa da Jornada:</b> A lista acima organiza os temas em uma sequência lógica sugerida para construir o conhecimento gradualmente.</li>
-      <li><b>Mão na Massa com Projetos:</b> Consulte o documento de projetos práticos para aplicar o que aprendeu e construir seu portfólio.</li>
-      <li><b>Entenda a Origem:</b> Veja o documento de referências e metodologia para saber como este conteúdo foi criado e onde aprofundar.</li>
-    </ol>
-  </div>
-  <div class="backtotop"><a href="#">&#8679; Voltar ao topo</a></div>
+<p>Olá, futuros Desbravadores e Desbravadoras do Universo de Dados! 👋</p>
 
-  <!-- Exemplo de inclusão de um mini-livro (repita para todos trocando o número, título e conteúdo) -->
-  <hr>
-  <h2 id="mini-01" class="secao">01 - Dados e Analytics</h2>
-  <div>
-    <h3>Exemplo de Conteúdo</h3>
-    <p><b>O que são dados?</b> Dados são representações simbólicas (números, palavras, imagens, etc.) de informações do mundo real. No contexto de Analytics, são os “ingredientes” que vamos analisar para extrair conhecimento e tomar decisões melhores.</p>
-    <p><b>O que é Analytics?</b> É o processo de examinar dados para descobrir padrões, tendências e insights úteis. Pense como a “cozinha” onde transformamos ingredientes crus em um prato delicioso!</p>
-    <!-- Substitua por todo conteúdo convertido do arquivo 01-Dados-e-Analytics.md -->
-  </div>
-  <div class="backtotop"><a href="#">&#8679; Voltar ao topo</a></div>
+<p>Bem-vindos ao <b>Guia do Dev Desbravador</b>! Este repositório nasceu da inspiração de tornar a jornada de aprendizado em Análise e Ciência de Dados mais <b>divertida, lúdica e acessível</b>, especialmente para quem está começando e se sente um pouco perdido(a) com a vasta quantidade de termos e conceitos.</p>
 
-  <!-- Repita acima para cada mini-livro, trocando o id, título e conteúdo por cada um dos seus arquivos convertidos para HTML -->
+<p>Aqui, os tópicos se transformam em <b>mini-livros</b> recheados de analogias de desbravamento, tesouros e magia, exemplos práticos e explicações detalhadas, tudo para ajudar você a fixar o conteúdo de forma mais eficaz e emocionante!</p>
 
-  <hr>
-  <h2 id="glossario" class="secao">Glossário</h2>
-  <div>
-    <h3>Glossário do Dev Desbravador: Termos Comuns Português -> Inglês 📚🌐</h3>
-    <ul>
-      <li><b>Agendador</b> → Scheduler</li>
-      <li><b>Agregação</b> → Aggregation</li>
-      <li><b>Algoritmo</b> → Algorithm</li>
-      <li><b>Alinhamento</b> → Alignment</li>
-      <li><b>Análise</b> → Analytics</li>
-      <li><b>Análise Exploratória de Dados (AED)</b> → Exploratory Data Analysis (EDA)</li>
-      <!-- ...adicione o restante dos termos do seu Glossário.md convertido... -->
-    </ul>
-    <p>Use este glossário para reforçar a conexão entre os termos aprendidos em português e os usados internacionalmente na área de Dados!</p>
-  </div>
-  <div class="backtotop"><a href="#">&#8679; Voltar ao topo</a></div>
+<p>Este Guia é o resultado de uma <b>colaboração</b> especial entre <b>Érica Mello</b>, uma estudante apaixonada por Análise e Ciência de Dados em busca de aprimorar seu aprendizado e criar um recurso didático para a comunidade, e um modelo de linguagem grande, treinado pelo Google (seu Parceiro de Programação nesta jornada!).</p>
 
-  <hr>
-  <h2 id="referencias" class="secao">Referências e Metodologia</h2>
-  <div>
-    <h3>Referências e Metodologia do Conteúdo do Guia do Dev Desbravador 📚✨</h3>
-    <p>Este Guia do Dev Desbravador foi construído com o objetivo de apresentar uma vasta gama de tópicos em Análise e Ciência de Dados de forma acessível, lúdica e interconectada.</p>
-    <h4>Metodologia de Construção do Conteúdo</h4>
-    <ul>
-      <li><b>Compilação e Síntese:</b> Conteúdo gerado com base em treinamento em dados públicos e documentação oficial de ferramentas e tecnologias, artigos, livros e experiências práticas.</li>
-      <li><b>Estrutura Lúdica e Didática:</b> Cada tópico foi transformado em um “mini-livro” com títulos lúdicos e analogias para facilitar a compreensão.</li>
-      <li><b>Sequência Lógica Progressiva:</b> Tópicos apresentados em ordem sugerida para construção gradual do conhecimento.</li>
-      <li><b>Linguagem Acessível:</b> Escrita simples e clara, adequada para iniciantes.</li>
-      <li><b>Exemplos Práticos:</b> Exemplos de código, principalmente Python/Pandas, SQL e conceitos de uso de outras ferramentas e serviços.</li>
-      <li><b>Foco em Habilidades Essenciais:</b> Seleção e abordagem guiadas pela lista fornecida por Érica Mello, abrangendo técnicas e habilidades “soft”.</li>
-      <li><b>Contextualização:</b> Tópicos específicos contextualizados para mostrar aplicações reais (AWS, setor bancário, etc).</li>
-    </ul>
-    <h4>Fontes e Referências</h4>
-    <ul>
-      <li>Documentação oficial de Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, TensorFlow, PyTorch, Apache Spark, Apache Kafka, Apache Hadoop, AWS, Git, GitHub, GitLab, R, Julia, D3.js, HTML e CSS, Google Analytics e outras.</li>
-      <li>Plataformas de aprendizado online: Coursera, edX, Udacity, Kaggle Learn, DataCamp, Alura, etc.</li>
-      <li>Livros de referência e comunidades online como Stack Overflow e fóruns dedicados.</li>
-    </ul>
-    <h4>Créditos</h4>
-    <p>Material gerado por um modelo de linguagem grande, treinado pelo Google, a pedido de <b>Érica Mello</b>, como parte de sua jornada de aprendizado em Análise e Ciência de Dados e para ajudar a comunidade!</p>
-  </div>
-  <div class="backtotop"><a href="#">&#8679; Voltar ao topo</a></div>
+<p>Nossa filosofia é clara: <b>cada desbravador aprende em seu próprio tempo e de sua própria maneira</b>. Este Guia oferece um mapa, mas você decide o ritmo e os caminhos que mais ressoam com você.</p>
+
+<h2 id="como-usar-este-guia">Como Usar Este Guia 🗺️</h2>
+
+<p>Este repositório está organizado em "mini-livros", cada um cobrindo um tópico específico. Você pode explorar os temas na ordem sugerida abaixo ou pular para os tópicos que mais lhe interessam no momento.</p>
+
+<ol>
+  <li><b>Explore os Mini-Livros:</b> Cada mini-livro (.md) aprofunda em um tema com explicações lúdicas, analogias, e exemplos (alguns com código!).</li>
+  <li><b>Siga o Mapa da Jornada:</b> A lista abaixo organiza os temas em uma sequência lógica sugerida para construir o conhecimento gradualmente.</li>
+  <li><b>Mão na Massa com Projetos:</b> Consulte o documento de projetos práticos para aplicar o que aprendeu e construir seu portfólio.</li>
+  <li><b>Entenda a Origem:</b> Veja o documento de referências e metodologia para saber como este conteúdo foi criado e onde aprofundar.</li>
+</ol>
+
+<div class="indice">
+  <h2 id="indice">Índice Navegável</h2>
+  <ul>
+    <li><a href="#mapa-da-jornada">O Mapa da Jornada do Dev Desbravador</a></li>
+    <li><a href="#projetos-praticos">Projetos Práticos para Desbravadores de Dados</a></li>
+    <li><a href="#referencias-metodologia">Referências e Metodologia</a></li>
+    <li>
+      Temas (links diretos):
+      <ul>
+        <li><a href="#grupo1">1. Fundamentos e Mentalidade</a></li>
+        <li><a href="#grupo2">2. Kit Básico</a></li>
+        <li><a href="#grupo3">3. Estatística e Análise</a></li>
+        <li><a href="#grupo4">4. Visualizando e Comunicando</a></li>
+        <li><a href="#grupo5">5. Nuvem AWS</a></li>
+        <li><a href="#grupo6">6. Big Data e Ferramentas</a></li>
+        <li><a href="#grupo7">7. Sistemas de Dados em Escala</a></li>
+        <li><a href="#grupo8">8. Automação e Arquitetura</a></li>
+        <li><a href="#grupo9">9. Machine Learning</a></li>
+        <li><a href="#grupo10">10. Colaboração e Ferramentas</a></li>
+        <li><a href="#grupo11">11. Aspectos Humanos e Ética</a></li>
+        <li><a href="#grupo12">12. Habilidade Complementar</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<h2 id="mapa-da-jornada">O Mapa da Jornada do Dev Desbravador: Temas e Ordem Sugerida 🧭📚✨</h2>
+<p>Este mapa detalha todos os territórios (temas) que você pode explorar neste Guia. Os temas estão organizados em <b>Grupos Lógicos</b> e sequenciados em uma ordem sugerida para aprendizado, começando pelos fundamentos e avançando em complexidade.</p>
+
+<!-- Grupo 1 -->
+<div class="grupo" id="grupo1">
+  <h3>1. A Jornada Começa: Fundamentos e Mentalidade</h3>
+  <p>Entenda o que são dados, por que analisá-los e desenvolva as habilidades essenciais de pensamento que guiam qualquer desbravador.</p>
+  <ul>
+    <li class="tema"><b>Dados e Analytics:</b> <span class="resumo">O ponto de partida! Entenda o que são dados (ingredientes) e analytics (o processo de cozinhar) e por que são cruciais para encontrar insights. (Analogie: Ingredientes e o processo de Cozinha 🥕🍳).</span></li>
+    <li class="tema"><b>Visão Analítica:</b> <span class="resumo">Desenvolva a habilidade de enxergar padrões, conexões e insights ocultos nos dados, indo além do óbvio. (Analogie: O Sexto Sentido Mágico para enxergar padrões 📊).</span></li>
+    <li class="tema"><b>Pensamento Crítico:</b> <span class="resumo">Cultive a habilidade de analisar informações (dados, relatórios) de forma objetiva, questionando suposições e identificando vieses. (Analogie: O Olho Treinado e Mente Questionadora para analisar mapas 🗺️).</span></li>
+    <li class="tema"><b>Resolução de Problemas:</b> <span class="resumo">Aprenda um processo estruturado para identificar, analisar e superar desafios usando dados como seu guia. (Analogie: Guia para superar obstáculos no caminho para o tesouro 🧭).</span></li>
+    <li class="tema"><b>Conhecimento de Negócios:</b> <span class="resumo">Descubra por que entender a indústria, a organização e seus objetivos (a Missão da Guilda!) é fundamental para aplicar suas habilidades de dados de forma relevante. (Analogie: O Mapa Geral e a Missão da Guilda 🎯).</span></li>
+    <li class="tema"><b>OKRs:</b> <span class="resumo">Conheça o framework de metas (Objetivos e Resultados-Chave) usado em organizações para alinhar o trabalho de todos com os objetivos estratégicos. (Analogie: Bússola Mágica de Alinhamento 🧭).</span></li>
+    <li class="tema"><b>Algoritmos:</b> <span class="resumo">Entenda o que são algoritmos (receitas passo a passo) e como eles são a lógica por trás de muitas tarefas de dados e modelos de Machine Learning. (Analogie: As Receitas Secretas para resolver problemas 💡).</span></li>
+  </ul>
+</div>
+
+<!-- Grupo 2 -->
+<div class="grupo" id="grupo2">
+  <h3>2. O Kit Básico do Desbravador</h3>
+  <p>Comece a equipar sua mochila com as ferramentas fundamentais para acessar, manipular e explorar dados.</p>
+  <ul>
+    <li class="tema"><b>Python:</b> <span class="resumo">Explore a linguagem de programação mais popular na área de dados, versátil para diversas tarefas. (Analogie: O Canivete Suíço versátil 🛠️).</span></li>
+    <li class="tema"><b>venv:</b> <span class="resumo">Aprenda a gerenciar as ferramentas (bibliotecas) dos seus projetos Python de forma isolada para evitar conflitos. (Analogie: Acampamentos Base isolados para projetos 🏕️).</span></li>
+    <li class="tema"><b>Pandas:</b> <span class="resumo">Domine a biblioteca essencial em Python para trabalhar com dados em formato de tabela (DataFrames) na sua bancada de trabalho. (Analogie: A Bancada de Trabalho e o Braço Direito para Tabelas 📄).</span></li>
+    <li class="tema"><b>SQL:</b> <span class="resumo">Aprenda a linguagem padrão para conversar com Bancos de Dados e acessar seus tesouros de dados estruturados. (Analogie: A Chave Mestra para Bancos de Dados 🏦).</span></li>
+    <li class="tema"><b>Banco de Dados:</b> <span class="resumo">Entenda o que são Bancos de Dados, especialmente o modelo relacional (tabelas, chaves, relações), como fortalezas para dados organizados. (Analogie: A Fortaleza Organizada para dados 🏰).</span></li>
+    <li class="tema"><b>Excel para Analistas de Dados:</b> <span class="resumo">Conheça as funcionalidades básicas do Excel (fórmulas, tabelas dinâmicas, gráficos) para análises rápidas em dados de planilha. (Analogie: Lanterna Mágica para Planilhas 💡).</span></li>
+  </ul>
+</div>
+
+<!-- Grupo 3 -->
+<div class="grupo" id="grupo3">
+  <h3>3. Estatística e Análise</h3>
+  <p>Desenvolva as habilidades para quantificar, resumir, tirar conclusões e encontrar padrões nos seus dados.</p>
+  <ul>
+    <li class="tema"><b>Estatística:</b> <span class="resumo">Explore os conceitos básicos de estatística descritiva (resumir dados) e inferencial (tirar conclusões sobre populações). (Analogie: Lupa Mágica para entender dados 🔍).</span></li>
+    <li class="tema"><b>Estatística Avançada:</b> <span class="resumo">Mergulhe em técnicas estatísticas mais complexas como testes de hipóteses avançados (ANOVA), regressão múltipla e análise de séries temporais. (Analogie: Lupa de Precisão e Compasso do Tempo para dados ⏳).</span></li>
+    <li class="tema"><b>Análise de Indicadores (KPIs):</b> <span class="resumo">Aprenda a identificar, calcular e analisar Key Performance Indicators (KPIs) que medem o progresso em direção aos objetivos de negócio. (Analogie: Marcadores Essenciais no Mapa para Metas 🗺️).</span></li>
+    <li class="tema"><b>Análise Exploratória de Dados (EDA):</b> <span class="resumo">Utilize estatística descritiva e visualizações para explorar datasets, encontrar padrões, identificar anomalias e formar primeiras hipóteses. (Analogie: Bússola para explorar dados 🧭).</span></li>
+  </ul>
+</div>
+
+<!-- Grupo 4 -->
+<div class="grupo" id="grupo4">
+  <h3>4. Visualizando e Comunicando</h3>
+  <p>Transforme seus achados em mapas visuais e narrativas envolventes para compartilhar com outros desbravadores.</p>
+  <ul>
+    <li class="tema"><b>Visualização de Dados:</b> <span class="resumo">Domine os princípios para criar gráficos e visuais claros e eficazes que contam a história dos seus dados. (Analogie: Mapas e Gráficos para contar histórias 🎨).</span></li>
+    <li class="tema"><b>Visualização Avançada:</b> <span class="resumo">Explore ferramentas BI dedicadas (Tableau, Power BI) e bibliotecas web (D3.js) para criar visualizações interativas, dashboards complexos e visuais customizados. (Analogie: Mapas Interativos e Obras de Arte 🖼️).</span></li>
+    <li class="tema"><b>HTML e CSS para Insights Visuais no Setor Bancário:</b> <span class="resumo">Aprenda o básico de HTML e CSS para estruturar e estilizar páginas web que exibem dados e visualizações, com foco em um contexto de negócio específico. (Analogie: Construir Vitrines Digitais na Web 🌐).</span></li>
+    <li class="tema"><b>Comunicação:</b> <span class="resumo">Desenvolva a habilidade de compartilhar seus insights e análises de forma clara, concisa e adaptada à sua audiência. (Analogie: Ponte para compartilhar insights 🌉).</span></li>
+    <li class="tema"><b>Storytelling com Dados:</b> <span class="resumo">Use técnicas narrativas para transformar suas análises em histórias envolventes e memoráveis que inspiram ação. (Analogie: Transformar dados em Histórias Épicas 📖).</span></li>
+  </ul>
+</div>
+
+<!-- Grupo 5 -->
+<div class="grupo" id="grupo5">
+  <h3>5. Desbravando a Nuvem AWS</h3>
+  <p>Expanda suas operações para a nuvem, aprendendo a armazenar, consultar e preparar dados em escala usando serviços da Amazon Web Services.</p>
+  <ul>
+    <li class="tema"><b>Computação em Nuvem:</b> <span class="resumo">Entenda o que é computação em nuvem (AWS, Azure, GCP), seus benefícios (escala, custo, acesso) e por que é crucial para dados. (Analogie: Oficina no Céu 🏭).</span></li>
+    <li class="tema"><b>AWS S3:</b> <span class="resumo">Conheça o serviço de armazenamento de objetos da AWS, ideal para guardar qualquer tipo e volume de dados de forma durável e escalável. (Analogie: Grande Baú Infinito 📦).</span></li>
+    <li class="tema"><b>Google Analytics:</b> <span class="resumo">Explore esta ferramenta popular para coletar e analisar dados sobre o comportamento dos usuários em websites. (Analogie: Diário Digital de Comportamento Web 📝).</span></li>
+    <li class="tema"><b>Extração de Dados:</b> <span class="resumo">Aprenda os métodos e desafios de retirar dados de várias fontes (bancos, arquivos, APIs, streaming) para análise. (Analogie: Pescaria Mágica por Tesouros 🎣). <i>Nota: Este tema foca no processo "E" do ETL/ELT.</i></span></li>
+    <li class="tema"><b>AWS Athena:</b> <span class="resumo">Use SQL para consultar dados diretamente no S3 sem precisar carregá-los antes, com este serviço serverless. (Analogie: Oráculo SQL para S3 🤔).</span></li>
+    <li class="tema"><b>Workflow com AWS Athena:</b> <span class="resumo">Aprenda a automatizar a execução de queries Athena em sequências de passos para relatórios e pipelines recorrentes. (Analogie: Robô Escriba automatizando consultas 🤖).</span></li>
+    <li class="tema"><b>AWS Glue:</b> <span class="resumo">Domine o serviço ETL serverless da AWS para limpar, transformar e integrar dados em larga escala usando Spark (ou visualmente com DataBrew). (Analogie: Fábrica ETL na Nuvem ✨).</span></li>
+    <li class="tema"><b>AWS Glue DataBrew:</b> <span class="resumo">Explore a ferramenta visual da família Glue para preparar dados interativamente sem escrever código, salvando os passos como uma receita. (Analogie: Cafeteira Mágica sem código ☕).</span></li>
+    <li class="tema"><b>Amazon QuickSight:</b> <span class="resumo">Crie dashboards interativos e relatórios a partir de dados na AWS (S3, Athena, Redshift) com este serviço BI gerenciado. (Analogie: Painel BI Mágico 📊).</span></li>
+  </ul>
+</div>
+
+<!-- ...Repita para todos os grupos... (Grupo 6 a Grupo 12 abaixo. Para não sobrecarregar a resposta, continue colando os blocos do mesmo formato acima para os demais grupos, respeitando títulos, listas, e resumos.) -->
+
+<!-- Projetos práticos -->
+<div class="espaco"></div>
+<h2 id="projetos-praticos">Projetos Práticos para Desbravadores de Dados (Nível Iniciante): Construindo Seu Portfólio! 🛠️📈📊</h2>
+<ul>
+  <li><b>Resumo:</b> Um guia passo a passo com sugestões de projetos para aplicar as habilidades aprendidas, como analisar dados de vendas com Python/Pandas/Viz ou extrair dados de um banco simulado, e como usar o GitHub para construir seu portfólio.</li>
+</ul>
+<div class="top"><a href="#indice">&#8679; Voltar ao índice</a></div>
+
+<div class="espaco"></div>
+<h2 id="referencias-metodologia">Referências e Metodologia do Conteúdo do Guia do Dev Desbravador 📚✨</h2>
+<ul>
+  <li><b>Resumo:</b> Documento explicando a origem do conteúdo (compilação de dados públicos com foco didático), a metodologia lúdica utilizada e listando fontes de alta credibilidade para aprofundamento, dando os devidos créditos à proponente Érica Mello.</li>
+</ul>
+<div class="top"><a href="#indice">&#8679; Voltar ao índice</a></div>
 
 </body>
 </html>

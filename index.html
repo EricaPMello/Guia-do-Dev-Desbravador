@@ -1589,28 +1589,31 @@ pip freeze > requirements.txt # Cria o arquivo na pasta do projeto
 deactivate</code></pre
 
 
-      <body>
+<body>
   <!-- ... Seu conteúdo, mini-livros, etc ... -->
 
   <!-- (Aqui termina o último mini-livro ou conteúdo principal) -->
 
   <!-- Script do Sumário flutuante -->
-  <script>
-    const btn = document.getElementById('sumario-btn');
-    const box = document.getElementById('sumario-box');
-    btn.onclick = function() {
-      if (box.style.display === 'block') {
+   <script>
+      const btn = document.getElementById('sumario-btn');
+      const box = document.getElementById('sumario-box');
+    
+      // Alterna o sumário ao clicar no botão
+      btn.addEventListener('click', function(event) {
+        event.stopPropagation(); // Não deixa o clique 'subir'
+        box.style.display = (box.style.display === 'block') ? 'none' : 'block';
+      });
+    
+      // Não fecha ao clicar DENTRO do sumário
+      box.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+    
+      // Fecha ao clicar fora do botão ou do sumário
+      document.addEventListener('click', function() {
         box.style.display = 'none';
-      } else {
-        box.style.display = 'block';
-      }
-    };
-    // Fecha o sumário ao clicar fora dele:
-    document.addEventListener('click', function(e) {
-      if (!btn.contains(e.target) && !box.contains(e.target)) {
-        box.style.display = 'none';
-      }
-    });
+      });
   </script>
 </body>
 </html>

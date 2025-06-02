@@ -2439,7 +2439,7 @@ JOIN clientes c ON p.id_cliente = c.id_cliente;
   <!-- (Aqui termina o último mini-livro ou conteúdo principal) -->
 
   <!-- Script do Sumário flutuante -->
-   <script>
+<script>
       const btn = document.getElementById('sumario-btn');
       const box = document.getElementById('sumario-box');
     
@@ -2458,6 +2458,13 @@ JOIN clientes c ON p.id_cliente = c.id_cliente;
       document.addEventListener('click', function() {
         box.style.display = 'none';
       });
-  </script>
+
+      // FECHA o sumário ao clicar em qualquer link do sumário
+      box.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          box.style.display = 'none';
+        });
+      });
+</script>
 </body>
 </html>

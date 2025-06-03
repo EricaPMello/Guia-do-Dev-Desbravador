@@ -3783,6 +3783,111 @@ except Exception as e:
     Continue lançando suas redes para coletar os tesouros de dados, Desbravador(a)! Uma boa pescaria é o começo de uma grande análise! 💪
   </p>
 </div>
+
+<div class="minilivro" id="mini27">
+  <h2>AWS Athena: O Oráculo da Nuvem que Responde Suas Perguntas de SQL Sobre o Tesouro no S3! ☁️🗣️🔎</h2>
+
+  <p>Olá de novo, Desbravador(a) analítico(a)!</p>
+  <p>
+    Seu tesouro está seguro e escalável no AWS S3 ☁️📦💎. Mas dados guardados só têm valor quando analisados! Para consultar grandes volumes de dados direto do S3, sem baixar nada, existe o <b>AWS Athena</b>.
+  </p>
+
+  <div class="analogia">
+    <b>Analogie:</b> AWS ATHENA é o ORÁCULO SÁBIO na Nuvem 🗣️🔎 que "lê" o conteúdo do seu Baú S3 📦💎 e responde a perguntas na linguagem SQL 🔑, sem tirar o tesouro do lugar.
+  </div>
+  <p><b>Mental Trigger:</b> ATHENA = ORÁCULO SQL para S3 ☁️🗣️🔑.</p>
+
+  <h3>O Que é AWS Athena? Seu Motor de Query SQL no S3! 🧠☁️</h3>
+  <ul>
+    <li><b>Serverless:</b> Não precisa configurar ou gerenciar servidores. Só escreve SQL e roda!</li>
+    <li><b>Pague pela Query:</b> Você paga pela quantidade de dados lidos no S3.</li>
+    <li><b>SQL Padrão:</b> Usa SQL popular (Presto/Trino).</li>
+    <li><b>Lê direto do S3:</b> Não precisa importar para um banco tradicional.</li>
+  </ul>
+
+  <h3>Como o Oráculo Consulta o Tesouro? (O Mecanismo) ⚙️</h3>
+  <ol>
+    <li><b>Definir a Estrutura (Schema):</b> Diga ao Athena (e ao Data Catalog) quais colunas e tipos seus arquivos possuem.</li>
+    <li><b>Criar uma Tabela no Athena:</b> Uma tabela virtual aponta para a localização dos arquivos no S3. Só armazena metadados!</li>
+    <li><b>Rodar Queries SQL:</b> Escreva queries usando a tabela criada. Athena lê apenas o necessário para responder.</li>
+  </ol>
+  <pre><code class="language-sql">CREATE EXTERNAL TABLE IF NOT EXISTS meu_banco.vendas_s3 (
+  produto string,
+  valor float,
+  quantidade int,
+  cidade string,
+  data date
+)
+ROW FORMAT DELIMITED
+  FIELDS TERMINATED BY ','
+STORED AS TEXTINPUTFORMAT
+LOCATION 's3://nome-unico-do-meu-balde/dados/vendas/';
+  </code></pre>
+
+  <h3>Por Que Usar o Oráculo Athena? ✨🔎</h3>
+  <ul>
+    <li><b>Análise Ad-Hoc Rápida:</b> Consultas rápidas sem mover dados.</li>
+    <li><b>Custo-Benefício:</b> Paga pelo uso, ideal para grandes volumes e consultas esporádicas.</li>
+    <li><b>Simplicidade:</b> Sem infraestrutura para manter.</li>
+    <li><b>Integração com S3:</b> Lê direto do armazenamento barato e durável.</li>
+  </ul>
+
+  <h3>Consultando o Oráculo: Queries no AWS Athena! 🗣️🔑</h3>
+  <pre><code class="language-sql">-- 5 produtos mais caros
+SELECT produto, AVG(valor) as media_valor_venda
+FROM vendas_s3
+GROUP BY produto
+ORDER BY media_valor_venda DESC
+LIMIT 5;
+
+-- Total de vendas em SP em Outubro/2023
+SELECT COUNT(*) as total_vendas
+FROM vendas_s3
+WHERE cidade = 'SP'
+  AND data BETWEEN DATE '2023-10-01' AND DATE '2023-10-31';
+
+-- Cidades com total de vendas &gt; 1000
+SELECT cidade, SUM(valor) as total_valor_cidade
+FROM vendas_s3
+GROUP BY cidade
+HAVING SUM(valor) &gt; 1000.00;
+  </code></pre>
+  <p>Você pode usar JOINs se tiver mais tabelas no Athena!</p>
+
+  <h3>Otimizando Perguntas para o Oráculo (Economizando Ouro! 💰💡)</h3>
+  <ul>
+    <li><b>Selecione só o necessário:</b> Evite SELECT *. Escolha apenas as colunas que precisa.</li>
+    <li><b>Filtre ao máximo:</b> WHERE bem usados reduzem dados lidos (e custo).</li>
+    <li><b>Particione seus dados:</b> Organize arquivos por pasta (ano, mês, etc.) e configure partições na tabela. Queries filtrando partições leem menos dados.</li>
+    <li><b>Use formatos colunares (Parquet/ORC):</b> Athena lê só as colunas usadas na query, reduzindo custo e acelerando execução.</li>
+  </ul>
+  <div class="analogia">
+    <b>Mental Trigger Otimização:</b> Pague pela Leitura! 🤔 Use SELECTs e WHERE inteligentes, partições e Parquet/ORC para consultas rápidas e baratas!
+  </div>
+
+  <h3>Onde o Oráculo Athena Ajuda o Desbravador? 🗺️</h3>
+  <ul>
+    <li><b>Análise Ad-Hoc de Logs:</b> Consultar grandes volumes de logs salvos no S3.</li>
+    <li><b>Exploração Inicial de Dados:</b> Entenda rapidamente o conteúdo no S3 antes de importar para um DW.</li>
+    <li><b>Dados do S3 para BI:</b> Conecte Tableau, Power BI direto ao Athena para visualizar dados do S3.</li>
+  </ul>
+
+  <h3>Recapitulando o Oráculo SQL no S3! 🧠☁️🗣️🔎🔑</h3>
+  <ul>
+    <li><b>AWS Athena:</b> Consulta interativa sobre dados no S3 usando SQL.</li>
+    <li><b>Características:</b> Serverless, pague pela query, SQL padrão.</li>
+    <li><b>Como funciona:</b> Crie tabela virtual apontando para S3. Athena lê dados na hora da query.</li>
+    <li><b>Otimização:</b> SELECT específicos, WHERE, partições, Parquet/ORC.</li>
+  </ul>
+
+  <h4>Próximos Passos na Nuvem com Dados... 🗺️☁️</h4>
+  <ul>
+    <li>Com seus dados no S3, explore outros serviços AWS integrados para processamento e análise avançada.</li>
+  </ul>
+  <p>
+    Use Athena como seu Oráculo SQL na nuvem para responder perguntas poderosas sobre grandes tesouros de dados — sem sair do S3! 💪
+  </p>
+</div>
   
 <body>
   <!-- ... Seu conteúdo, mini-livros, etc ... -->

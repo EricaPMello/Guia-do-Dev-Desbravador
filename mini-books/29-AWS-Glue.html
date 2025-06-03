@@ -1,0 +1,118 @@
+<div class="minilivro" id="mini29">
+  <h2>AWS Glue: A Fábrica de Magia na Nuvem para Limpar e Transformar Seus Dados! ✨🏭🧹</h2>
+
+  <p>E aí, Desbravador(a) que gosta de dados brilhando!</p>
+  <p>
+    Seu Grande Baú S3 ☁️📦💎 está cheio de tesouros (dados), mas parte está desorganizada, misturada com areia ou em formatos difíceis. Antes de levar para o robô aprendiz de ML ou para a exibição final, é hora de <b>limpar e transformar</b>! O <b>AWS Glue</b> é sua <b>Fábrica de Magia Automatizada</b> na nuvem: um serviço ETL serverless e totalmente gerenciado.
+  </p>
+
+  <div class="analogia">
+    <b>Analogie:</b> AWS GLUE é uma Fábrica de Magia ✨🏭: você envia ingredientes brutos (dados S3) e recebe produtos prontos (dados limpos, organizados e no formato certo) para outros usos.
+  </div>
+  <p><b>Mental Trigger:</b> GLUE = FÁBRICA ETL Serverless ✨🏭🧹.</p>
+
+  <h3>As Partes da Fábrica de Magia AWS Glue 🧩⚙️</h3>
+  <ul>
+    <li><b>Data Catalog (Almoxarifado):</b> Catálogo central de schemas/metadados dos dados (usado por Athena, Glue, etc.).</li>
+    <li><b>Crawlers (Aranhas Exploradoras 🕷️):</b> Inspecionam pastas S3/bancos, descobrem a estrutura dos dados e atualizam o Data Catalog automaticamente.</li>
+    <li><b>ETL Jobs (Receitas de Fábrica):</b> Scripts (PySpark/Scala ou visual com Glue Studio) para transformar dados em escala.</li>
+    <li><b>Triggers (Botões de Início):</b> Agendam ou disparam a execução dos Jobs (por tempo ou eventos).</li>
+  </ul>
+
+  <h3>Por Que Usar a Fábrica Glue? ✨🏭</h3>
+  <ul>
+    <li>ETL escalável e sem servidor (serverless Spark gerenciado).</li>
+    <li>Catálogo integrado para facilitar consumo em Athena, ML, BI, etc.</li>
+    <li>Descoberta automática de schema.</li>
+    <li>Flexibilidade: código complexo ou interface visual (Glue Studio).</li>
+    <li>Suporte a múltiplas fontes e destinos (S3, RDS, Redshift, etc.).</li>
+    <li>Custo-efetivo: pague só pelo tempo de execução dos Jobs.</li>
+  </ul>
+
+  <h3>O Fluxo Típico da Fábrica Glue 🔄</h3>
+  <ol>
+    <li>Dados brutos salvos no S3 (<code>s3://meu-balde/raw/vendas/</code>).</li>
+    <li>Crawler inspeciona e cria/atualiza tabela no Data Catalog.</li>
+    <li>ETL Job lê dados brutos, transforma (limpa, agrega, padroniza, converte).</li>
+    <li>Dados transformados salvos em novo local no S3 (ex: <code>processed/vendas_limpas_parquet/</code>).</li>
+    <li>Crawler ou Job atualiza o Data Catalog com a nova tabela processada.</li>
+    <li>Outros serviços (Athena, ML, BI) usam os dados limpos diretamente!</li>
+  </ol>
+
+  <h3>Um Toque de PySpark em Jobs Glue 🐍✨</h3>
+  <pre><code class="language-python"># Exemplo simplificado de Job Glue com PySpark
+import sys
+from awsglue.transforms import *
+from awsglue.utils import getResolvedOptions
+from pyspark.context import SparkContext
+from awsglue.context import GlueContext
+from awsglue.job import Job
+
+args = getResolvedOptions(sys.argv, ['JOB_NAME'])
+sc = SparkContext()
+glueContext = GlueContext(sc)
+spark = glueContext.spark_session
+job = Job(glueContext)
+job.init(args['JOB_NAME'], args)
+
+# Extrair
+datasource_raw = glueContext.create_dynamic_frame.from_catalog(
+    database="meu_banco",
+    table_name="vendas_brutas"
+)
+dataframe_raw = datasource_raw.toDF()
+
+# Transformar
+dataframe_limpo = dataframe_raw.filter("valor_venda IS NOT NULL AND valor_venda > 0")
+dataframe_transformado = dataframe_limpo.withColumn(
+    "valor_total_item",
+    dataframe_limpo["quantidade"] * dataframe_limpo["valor_unitario"]
+)
+
+from pyspark.sql.functions import col, sum as spark_sum
+dataframe_agregado = dataframe_transformado.groupBy("produto").agg(
+    spark_sum(col("valor_total_item")).alias("total_vendido_por_produto")
+)
+
+# Carregar
+glueContext.write_dynamic_frame.from_catalog(
+    frame = from_data_frame(dataframe_agregado, glueContext, "agregado_dyf"),
+    database = "meu_banco",
+    table_name = "vendas_agregadas_processadas",
+    format = "parquet",
+    additional_options = {"enableUpdateCatalog":True}
+)
+job.commit()
+  </code></pre>
+  <p>
+    <b>Dica:</b> Glue Studio permite criar ETL Jobs visualmente, sem escrever código!
+  </p>
+
+  <h3>AWS Glue DataBrew: A Bancada Mágica Visual ✨👁️</h3>
+  <ul>
+    <li>Ferramenta visual para preparar dados sem código.</li>
+    <li>Transformações (limpeza, padronização, filtro) via interface intuitiva.</li>
+    <li>Cria "receitas" que podem ser aplicadas em larga escala.</li>
+    <li>Ideal para analistas que preferem GUI ao invés de PySpark.</li>
+    <li>Analogie: Uma bancada mágica onde você "mexe" nos dados e a fábrica repete seus passos para grandes lotes!</li>
+  </ul>
+
+  <h3>Recapitulando a Fábrica de Magia Glue! 🧠✨🏭🧹</h3>
+  <ul>
+    <li><b>AWS Glue:</b> ETL serverless/gerenciado para limpar, transformar e carregar dados na nuvem.</li>
+    <li><b>Partes:</b> Data Catalog, Crawlers, ETL Jobs, Triggers.</li>
+    <li><b>Por que usar:</b> ETL escalável, catálogo integrado, descoberta de schema, flexível (código/visual), custo-efetivo.</li>
+    <li><b>Fluxo:</b> S3 raw ➡️ Crawler ➡️ Data Catalog + ETL Job ➡️ S3 processado ➡️ Data Catalog atualizado.</li>
+    <li><b>DataBrew:</b> Ferramenta visual de preparação de dados ("receitas" automáticas).</li>
+  </ul>
+
+  <h4>Próximos Passos na Fábrica e Além... 🗺️☁️</h4>
+  <ul>
+    <li>Explorar Glue DataBrew visualmente.</li>
+    <li>Usar dados limpos/otimizados em QuickSight, Athena, ML, etc.</li>
+    <li>Construir pipelines de dados completos com Glue.</li>
+  </ul>
+  <p>
+    Com o Glue, seus dados no S3 sempre estarão limpos, organizados e prontos para análise! Pronto(a) para o próximo passo na nuvem? 💪
+  </p>
+</div>

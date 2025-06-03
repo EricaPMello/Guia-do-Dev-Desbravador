@@ -5199,6 +5199,97 @@ spark.stop()
     Com a Arquitetura de Automação, você constrói sistemas de dados verdadeiramente profissionais, prontos para crescer e resistir a qualquer desafio! 💪
   </p>
 </div>
+
+<div class="minilivro" id="mini43">
+  <h2>Containers para Desenvolvedores (Foco em Docker e Uso com GitHub): Acampamentos Portáteis e Organizados para Suas Ferramentas! ⛺📦🐍🚢</h2>
+
+  <p>Olá de novo, Desbravador(a) que gosta de acampamentos organizados!</p>
+  <p>
+    Containers são <b>acampamentos portáteis</b> para seu código e ferramentas. Eles garantem que tudo rode igualzinho em qualquer lugar: seu computador, o do colega, um servidor ou na nuvem. <b>Docker</b> é a caixa de ferramentas mais popular para criar e gerenciar containers!
+  </p>
+
+  <div class="analogia">
+    <b>Analogie:</b> CONTAINER = Acampamento Base Portátil ⛺📦.<br>
+    DOCKER = Ferramenta para montar esses acampamentos.<br>
+    IMAGEM DOCKER = Receita 📜 do acampamento.<br>
+    CONTAINER DOCKER = Acampamento rodando.
+  </div>
+  <p><b>Mental Trigger:</b> CONTAINER = Acampamento Portátil + Ferramentas ⛺📦.</p>
+
+  <h3>Por Que Containers para Desbravadores de Dados? 🤔⛺📦</h3>
+  <ul>
+    <li>Ambientes consistentes: "Funciona na minha máquina!" nunca mais.</li>
+    <li>Reproducibilidade: Analises e modelos sempre iguais, onde for rodar.</li>
+    <li>Gerenciamento de dependências facilitado.</li>
+    <li>Automação e CI/CD: Rodar pipelines (GitHub Actions, GitLab CI/CD) sempre no mesmo ambiente.</li>
+    <li>Deploy simplificado e seguro de aplicações.</li>
+    <li>Isolamento: Um container não interfere no outro.</li>
+  </ul>
+
+  <h3>Construindo Seu Acampamento Portátil (Dockerfile!) 🏗️⛺📦</h3>
+  <pre><code class="language-dockerfile"># Imagem base (Python)
+FROM python:3.9-slim
+
+WORKDIR /app
+
+# Copia dependências
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copia script e dados
+COPY seu_script_analise.py .
+COPY dados.csv .
+
+CMD ["python", "seu_script_analise.py"]
+</code></pre>
+  <p>
+    <b>requirements.txt exemplo:</b><br>
+    pandas==2.0.3<br>
+    matplotlib==3.8.0<br>
+    seaborn==0.13.0
+  </p>
+  <div class="analogia">
+    O <b>Dockerfile</b> é a receita 📜 do acampamento. Cada linha é um passo para montar o ambiente.
+  </div>
+
+  <h3>Docker e Uso com GitHub / GitLab (Acampamentos na Guilda!) 📜🛠️</h3>
+  <ul>
+    <li>Versione o Dockerfile e o código junto no repositório (GitHub/GitLab).</li>
+    <li>CI/CD: O pipeline constrói e roda containers automaticamente.</li>
+    <li>Atualizou o código/Dockerfile? Nova imagem Docker é criada na hora pela automação.</li>
+  </ul>
+  <div class="analogia">
+    O Quartel General (GitHub/GitLab) 🛠️ constrói novas caixas mágicas (imagens Docker) toda vez que você atualiza seu projeto.
+  </div>
+
+  <h3>Containers na Jornada de Dados 🗺️⛺📦</h3>
+  <ul>
+    <li>Pipelines ETL/ELT consistentes.</li>
+    <li>Deploy de modelos ML como APIs ou batch.</li>
+    <li>Testes automatizados em ambientes limpos.</li>
+    <li>Compartilhar ambientes com colegas sem dor de cabeça.</li>
+    <li>Serviços de nuvem (AWS ECS, EKS, Lambda, Google Cloud Run) gerenciam seus containers em escala.</li>
+  </ul>
+
+  <h3>Recapitulando Containers e Docker! 🧠⛺📦🐍🚢</h3>
+  <ul>
+    <li>Container: Unidade portátil, isolada e completa para seu projeto.</li>
+    <li>Docker: Ferramenta para criar, rodar e compartilhar containers.</li>
+    <li>Imagem Docker: Receita do ambiente (Dockerfile).</li>
+    <li>Por que usar: Consistência, automação, deploy, colaboração, escala.</li>
+    <li>Com GitHub/GitLab: Dockerfile versionado + CI/CD = ambientes sempre iguais.</li>
+  </ul>
+
+  <h4>Próximos Acampamentos e Rotas... 🗺️⛺</h4>
+  <ul>
+    <li>Explorar mais comandos e sintaxe de Dockerfile.</li>
+    <li>Aprender CI/CD com GitHub Actions e GitLab CI/CD usando containers.</li>
+    <li>Conhecer orquestradores e serviços de nuvem para containers (ECS, EKS, etc.).</li>
+  </ul>
+  <p>
+    Continue construindo acampamentos portáteis e confiáveis, Desbravador(a)! O segredo do sucesso é rodar igual em qualquer missão! 💪
+  </p>
+</div>
   
 <body>
   <!-- ... Seu conteúdo, mini-livros, etc ... -->

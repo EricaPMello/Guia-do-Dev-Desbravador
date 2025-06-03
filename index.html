@@ -3888,6 +3888,81 @@ HAVING SUM(valor) &gt; 1000.00;
     Use Athena como seu Oráculo SQL na nuvem para responder perguntas poderosas sobre grandes tesouros de dados — sem sair do S3! 💪
   </p>
 </div>
+
+<div class="minilivro" id="mini28">
+  <h2>Workflow com AWS Athena: Automatizando a Consulta ao Oráculo e a Entrega de Respostas! 🤖🗣️🔎🔄</h2>
+
+  <p>Olá de novo, Desbravador(a) que busca automatização inteligente!</p>
+  <p>
+    Você já usa o AWS Athena 🗣️🔎 para consultas SQL no seu Baú S3 ☁️📦. Mas executar queries manualmente todo dia não é eficiente… é hora de automatizar!
+  </p>
+
+  <div class="analogia">
+    <b>Analogie:</b> Em vez de ir ao Oráculo todo dia, seu Robô Escriba 🤖 segue o plano, pergunta ao Oráculo Athena 🗣️🔎 nos horários certos e entrega automaticamente as respostas!
+  </div>
+  <p><b>Mental Trigger:</b> Workflow Athena = Robô Escriba Automatizado 🤖🗣️🔎🔄.</p>
+
+  <h3>Por Que Automatizar Workflows com Athena? 🤖🔄💡</h3>
+  <ul>
+    <li>Tarefas Repetitivas: Queries agendadas (diárias, semanais…)</li>
+    <li>Atualização de Dashboards: Dados sempre frescos para relatórios e KPIs.</li>
+    <li>Pipelines ETL/ELT: Queries Athena como parte de pipelines de dados maiores.</li>
+    <li>Análise Quase em Tempo Real: Query disparada assim que novos arquivos chegam.</li>
+    <li>Consistência: Zero erro manual, resultados padronizados.</li>
+  </ul>
+
+  <h3>Os Passos Típicos em um Workflow Athena Automatizado ⚙️📜</h3>
+  <ol>
+    <li><b>Chegada de Dados no S3:</b> Novos arquivos em pastas organizadas (<code>s3://meu-balde/logs/year=2024/month=05/day=08/</code>).</li>
+    <li><b>Atualização do Catálogo:</b> Atualize partições com Glue Crawler 🕷️ ou comandos SQL/API (ligado ao Data Catalog).</li>
+    <li><b>Execução da Query Athena:</b> Dispare query SQL, resultados vão para S3.</li>
+    <li><b>Processamento/Entrega dos Resultados:</b> Processamento extra com Glue/Lambda, entrega para Redshift, QuickSight, alertas, etc.</li>
+  </ol>
+
+  <h3>Ferramentas para Construir o Robô Escriba e Seu Workflow 🤖🛠️☁️</h3>
+  <ul>
+    <li><b>AWS Glue:</b> Crawlers (atualizam catálogo), ETL Jobs, Glue Workflows (orquestração).</li>
+    <li><b>AWS Step Functions:</b> Workflows visuais serverless (sequência de Athena, Lambda, etc).</li>
+    <li><b>AWS Lambda:</b> Funções serverless que podem disparar queries Athena por eventos/agenda usando boto3.</li>
+    <li><b>AWS EventBridge / CloudWatch Events:</b> Agendamento ou triggers baseados em eventos (ex: arquivo novo no S3).</li>
+    <li><b>Apache Airflow:</b> Orquestração avançada (DAGs) para pipelines complexos (pode rodar Athena, Glue, etc).</li>
+    <li><b>AWS CLI / SDKs:</b> Executar tudo programaticamente (Python, shell, etc).</li>
+  </ul>
+
+  <h3>Padrões Comuns de Workflow Athena Automatizado 🗺️🔄</h3>
+  <ul>
+    <li>Consulta Agendada Simples: EventBridge ⏰ ➡️ Lambda (query Athena) ➡️ Resultados no S3.</li>
+    <li>Pipeline ETL/ELT: Chegada S3 ➡️ EventBridge ➡️ Step Functions (Crawler ➡️ Athena ➡️ Glue ➡️ Redshift).</li>
+    <li>Atualização de Dashboard: EventBridge ⏰ ➡️ Athena ➡️ S3 ➡️ Redshift ➡️ QuickSight lê dados atualizados.</li>
+  </ul>
+
+  <h3>Otimização no Workflow Athena 🗣️🔎💰💡</h3>
+  <ul>
+    <li>Use <b>partições</b> e <b>Parquet/ORC</b> para queries rápidas e econômicas.</li>
+    <li>Evite <code>SELECT *</code>; selecione só o que precisa.</li>
+    <li>Filtre ao máximo no WHERE.</li>
+    <li>Automatize a atualização de partições sempre que novos dados chegarem.</li>
+  </ul>
+
+  <h3>Recapitulando Workflow com AWS Athena! 🧠🤖🗣️🔎🔄</h3>
+  <ul>
+    <li>Workflow com Athena: Sequência automatizada de consultas e entrega de resultados.</li>
+    <li>Por que automatizar: Repetição, atualização, pipelines, rapidez, consistência.</li>
+    <li>Passos: Dados no S3 ➡️ Atualizar Catálogo ➡️ Query Athena ➡️ Processar/Entregar.</li>
+    <li>Ferramentas: Glue, Step Functions, Lambda, EventBridge, Airflow, CLI/SDKs.</li>
+    <li>Otimização: Essencial para custo e performance.</li>
+  </ul>
+
+  <h4>Próximas Rotas na Automação... 🗺️🤖</h4>
+  <ul>
+    <li>Aprofundar em Step Functions e Airflow para workflows complexos.</li>
+    <li>Explorar Glue Jobs para processamento ETL junto com Athena.</li>
+    <li>Criar um workflow real na AWS!</li>
+  </ul>
+  <p>
+    Continue automatizando suas tarefas e liberando seu tempo para novas descobertas, Desbravador(a)! A eficiência na logística de dados é um grande tesouro! 💪
+  </p>
+</div>
   
 <body>
   <!-- ... Seu conteúdo, mini-livros, etc ... -->

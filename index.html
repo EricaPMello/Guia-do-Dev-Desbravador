@@ -5122,6 +5122,83 @@ spark.stop()
     Entenda e desenhe sua Arquitetura de Automação para escalar e confiar nos robôs da sua fábrica de dados! 💪
   </p>
 </div>
+
+<div class="minilivro" id="mini42">
+  <h2>Arquitetura de Automação: Projetando o Sistema Nervoso Robótico da Sua Fábrica de Dados com Precisão! 🤖🏗️⚙️🧠💡</h2>
+
+  <p>Olá de novo, Desbravador(a) arquiteto(a) de robôs!</p>
+  <p>
+    A <b>Arquitetura de Automação</b> é o PROJETO DETALHADO 🤖🏗️⚙️ que define como construir um sistema completo de robôs automatizados, pipelines e sensores trabalhando juntos. É o blueprint para automação de dados confiável, escalável e sustentável, conectando tarefas, orquestradores, triggers, ambientes de execução, tratamento de falhas, monitoramento e escalabilidade.
+  </p>
+
+  <div class="analogia">
+    <b>Analogie:</b> No mini-livro "Automação", aprendemos a construir robôs individuais 🤖. Agora, a ARQUITETURA DE AUTOMAÇÃO é o SISTEMA NERVOSO COMPLETO 🤖🏗️⚙️ da Fábrica de Dados, garantindo que tudo trabalhe junto, coordenado e resiliente.
+  </div>
+  <p><b>Mental Trigger:</b> ARQUITETURA AUTOMAÇÃO = Projeto Sistema Robótico Robusto 🤖🏗️✅.</p>
+
+  <h3>Por Que Projetar o Sistema Nervoso Robótico com Precisão? 🤔💡✅</h3>
+  <ul>
+    <li><b>Resiliência:</b> Prever falhas e definir como o sistema se recupera.</li>
+    <li><b>Escalabilidade:</b> Suportar crescimento de tarefas, dados e robôs.</li>
+    <li><b>Manutenção:</b> Estrutura modular e clara facilita ajustes e evolução.</li>
+    <li><b>Visibilidade:</b> Logs e monitoramento centralizados para controle total.</li>
+    <li><b>Evitar Spaghetti Automation:</b> Impede scripts desconectados e difíceis de manter.</li>
+  </ul>
+
+  <h3>Componentes Chave da Arquitetura de Automação ⚙️🧠🚦👂</h3>
+  <ul>
+    <li><b>Orquestrador (Cérebro):</b> Gerencia workflows, dependências, retentativas, monitoramento (Airflow, Step Functions, Glue Workflows).</li>
+    <li><b>Agendadores / Triggers (Sensores/Relógios):</b> Definem quando workflows iniciam (cron, EventBridge, SQS, Lambda).</li>
+    <li><b>Ambiente de Execução (Músculos):</b> Onde tarefas rodam (Lambda, EC2, Containers, Glue Jobs, Spark Clusters).</li>
+    <li><b>Definições de Tarefas / Jobs:</b> Código/configuração (Python, SQL, Jobs Glue, scripts shell) versionados.</li>
+    <li><b>Monitoramento e Logging (Sentidos):</b> Coleção, armazenamento e alerta de logs/status (CloudWatch, Prometheus, ELK, Grafana).</li>
+    <li><b>Gerenciamento de Segredos (Cofre):</b> Armazenamento seguro de credenciais (AWS Secrets Manager, Vault).</li>
+  </ul>
+
+  <h3>Padrões Arquiteturais Comuns 🏗️🤖💡</h3>
+  <ul>
+    <li><b>Pipeline ETL/ELT Orquestrado:</b> Sequência linear/ramificada de tarefas (Airflow, Step Functions).</li>
+    <li><b>Automação Baseada em Eventos:</b> Workflows reativos via triggers/eventos (EventBridge, Lambda).</li>
+    <li><b>Automação Batch em Larga Escala:</b> Jobs Spark/Glue, particionamento, clusters gerenciados.</li>
+    <li><b>Automação de MLOps:</b> Ciclo de vida de modelos ML automatizado.</li>
+  </ul>
+
+  <h3>Arquitetura de Automação e a Arquitetura de Dados Geral 🏛️🔗🤖🏗️</h3>
+  <ul>
+    <li>Executa os processos definidos na Arquitetura de Dados (DW, Data Lake, Mesh).</li>
+    <li>Depende das camadas de armazenamento e processamento.</li>
+    <li>É essencial para Catálogo de Dados, Qualidade e Governança.</li>
+    <li>Em Data Mesh, cada domínio pode ter sua própria arquitetura de automação.</li>
+  </ul>
+
+  <h3>Caso de Uso: Ingestão Diária de Logs no Data Lake 🗓️📊📈</h3>
+  <ol>
+    <li><b>Trigger:</b> EventBridge Scheduler agenda para 1 AM.</li>
+    <li><b>Orquestrador:</b> Step Functions orquestra a sequência.</li>
+    <li><b>Execução:</b> Lambda lê FTP e salva no S3 Raw.</li>
+    <li><b>Crawler Glue:</b> Atualiza Catálogo na nova pasta S3 Raw.</li>
+    <li><b>Job Glue:</b> Agrega logs e salva Parquet no S3 Curated.</li>
+    <li><b>Monitoramento:</b> CloudWatch alerta em caso de falha.</li>
+  </ol>
+
+  <h3>Recapitulando Arquitetura de Automação! 🧠🤖🏗️⚙️💡</h3>
+  <ul>
+    <li><b>Propósito:</b> Construir sistemas automatizados robustos e confiáveis.</li>
+    <li><b>Componentes:</b> Orquestrador, Triggers, Execução, Jobs, Monitoramento, Segredos.</li>
+    <li><b>Padrões:</b> Centralizada, Distribuída, Event-Driven, Batch/Streaming.</li>
+    <li><b>Integração:</b> Executa a automação dos processos da Arquitetura de Dados.</li>
+  </ul>
+
+  <h4>Próximos Planos de Construção Final... 🗺️🤖🏗️</h4>
+  <ul>
+    <li>Praticar projetos de automação com Airflow, Step Functions, Lambda, Glue, etc.</li>
+    <li>Explorar padrões como Data Mesh e Lakehouse.</li>
+    <li>Aprofundar em monitoramento, segurança e escalabilidade.</li>
+  </ul>
+  <p>
+    Com a Arquitetura de Automação, você constrói sistemas de dados verdadeiramente profissionais, prontos para crescer e resistir a qualquer desafio! 💪
+  </p>
+</div>
   
 <body>
   <!-- ... Seu conteúdo, mini-livros, etc ... -->

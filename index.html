@@ -230,7 +230,31 @@ h2 {
   object-fit: cover;
   box-shadow: 0 2px 8px rgba(33, 50, 84, 0.18);
   background: #fff; /* Fundo branco atrás do avatar */
-}    
+}
+
+  .indice ul {
+  list-style: none;           /* Remove as bolinhas */
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;         /* Centraliza os itens */
+}
+
+.indice li {
+  margin: 10px 0;
+  font-size: 1.12em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.indice li::before {
+  content: "📘";              /* Ícone padrão - troque por outro emoji se quiser */
+  font-size: 1.23em;
+  margin-right: 8px;
+  display: inline-block;
+}
+    
   </style>
 </head>
 <body>

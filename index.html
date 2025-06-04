@@ -232,27 +232,33 @@ h2 {
   background: #fff; /* Fundo branco atrás do avatar */
 }
 
-  .indice ul {
-  list-style: none;           /* Remove as bolinhas */
-  padding: 0;
-  margin: 0 auto;
-  text-align: center;         /* Centraliza os itens */
+.indice {
+  max-width: 720px;
+  margin: 40px auto;
+}
+
+.indice ul {
+  list-style: none;         /* Remove bolinhas */
+  padding-left: 48px;       /* Ajuste aqui para 4-5cm (~48px = ~1,3cm; 80px = ~2cm; 120px = ~3,3cm; 180px = ~5cm) */
+  margin: 0;
 }
 
 .indice li {
-  margin: 10px 0;
-  font-size: 1.12em;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
+  font-size: 1.09em;
+  margin: 10px 0;
+  text-align: left;
 }
 
 .indice li::before {
-  content: "📘";              /* Ícone padrão - troque por outro emoji se quiser */
-  font-size: 1.23em;
-  margin-right: 8px;
+  content: "→";
+  color: #3ec6e0;           /* Azul suave, pode trocar por #888 para cinza discreto */
+  font-size: 1.2em;
+  margin-right: 16px;
   display: inline-block;
+  width: 18px;              /* Garante alinhamento das setas */
+  text-align: center;
 }
     
   </style>

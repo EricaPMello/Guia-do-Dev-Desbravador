@@ -1,37 +1,56 @@
+# Guia do Dev Desbravador 🚀
 
-
-<!--
-  <<< Author notes: Finish >>>
-  Review what we learned, ask for feedback, provide next steps.
--->
-
-## Finish
-
-_Congratulations friend, you've completed this course!_
-
-<img src=https://octodex.github.com/images/constructocat2.jpg alt=celebrate width=300 align=right>
-
-Your blog is now live and has been deployed!
-
-Here's a recap of all the tasks you've accomplished in your repository:
-
-- You enabled GitHub Pages.
-- You selected a theme using the config file.
-- You learned about proper directory format and file naming conventions in Jekyll.
-- You created your first blog post with Jekyll!
-
-### What's next?
-
-- Keep working on your GitHub Pages site... we love seeing what you come up with!
-- We'd love to hear what you thought of this course [in our discussion board](https://github.com/orgs/skills/discussions/categories/github-pages).
-- [Take another GitHub Skills course](https://github.com/skills).
-- [Read the GitHub Getting Started docs](https://docs.github.com/en/get-started).
-- To find projects to contribute to, check out [GitHub Explore](https://github.com/explore).
-
-<footer>
+Bem-vindo(a) ao meu repositório!  
+Aqui compartilho um pouco da minha jornada e aprendizados como estudante de Sistemas de Informação e entusiasta de tecnologia, dados e desenvolvimento ágil.
 
 ---
 
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/github-pages) &bull; [Review the GitHub status page](https://www.githubstatus.com/) &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+## Sobre Mim
 
-</footer>
+👩‍💻 **Erica Pereira de Mello**  
+Estagiária em Tecnologia no Itaú Unibanco | Aspirante a Engenheira de Dados  
+Apaixonada por Análise de Dados, Inovação e Novos Desafios
+
+- 7º semestre de Sistemas de Informação
+- Experiência prévia de 12 anos na área comercial, desenvolvendo visão de negócios e habilidades interpessoais diferenciadas
+- Em transição de carreira, unindo bagagem comercial e novas habilidades técnicas para entregar soluções completas e inovadoras
+
+---
+
+## Sobre o Projeto
+
+Este repositório foi criado como parte do meu aprendizado em HTML5 & CSS3 — fruto de cursos, estudos práticos e muita curiosidade!  
+Aqui você encontra exemplos de código, dicas e um pouco do meu olhar sobre o mundo do desenvolvimento web.
+
+**Principais tecnologias utilizadas:**
+- HTML5 e CSS3
+- Noções de Python, SQL, Java, Power BI, Tableau e metodologias ágeis
+
+---
+
+## Meus Valores
+
+- Trabalho em equipe e colaboração
+- Resolução de problemas com criatividade e empatia
+- Comunicação clara e objetiva
+- Busca constante por aprendizado e inovação
+
+---
+
+## Como navegar neste repositório
+
+- O código está organizado e revisado para facilitar compreensão e reutilização
+- Comentários e dicas foram incluídos para ajudar estudantes e entusiastas
+- Sinta-se à vontade para sugerir melhorias, apontar dúvidas ou apenas trocar uma ideia!
+
+---
+
+## Contato
+
+- [LinkedIn](https://www.linkedin.com/in/ericapmello/)
+- Email: ericapmello@outlook.com
+
+---
+
+**Obrigada por visitar!**  
+Se este material te ajudar de alguma forma, ficarei feliz em saber 😉  

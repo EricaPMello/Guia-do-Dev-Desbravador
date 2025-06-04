@@ -8,8 +8,11 @@ Aqui você encontra um dos meus primeiros projetos práticos em desenvolvimento 
 
 ## Sobre o Projeto
 
-Este repositório contém uma página desenvolvida em **HTML5** e **CSS3** como parte da minha trajetória de estudos em tecnologia. O objetivo é servir como portfólio, exercício prático e fonte de inspiração para quem está começando ou deseja revisitar conceitos fundamentais de construção de páginas web.
+Este repositório nasceu da minha própria busca por tornar o aprendizado em tecnologia mais acessível e prazeroso. Durante minha transição de carreira para análise e ciência de dados, percebi o quanto muitos termos e conceitos técnicos podem ser desafiadores, principalmente para quem está começando ou vem de outra área, como eu.
 
+Por isso, criei este material pensando em simplificar, organizar e traduzir esses conteúdos de uma forma mais leve, visual e prática — do jeito que eu gostaria de ter encontrado quando comecei! Meu objetivo é ajudar outras pessoas que, assim como eu, sentem dificuldade em reter e compreender tantos detalhes técnicos de forma rápida. 
+
+Se este projeto ajudar você a entender melhor, perder o medo ou se sentir mais confiante para seguir aprendendo, já terá cumprido seu propósito. Sinta-se à vontade para usar, adaptar, compartilhar ou dar sugestões — a ideia é crescer junto e tornar o caminho do aprendizado em tecnologia cada vez menos solitário e mais acolhedor.
 ---
 
 ## Tecnologias utilizadas
@@ -39,7 +42,7 @@ Sou movida por desafios, aprendizado contínuo e pelo desejo de compartilhar o q
 
 ## Contato
 
-- [LinkedIn](https://www.linkedin.com/in/ericapmello/)
+- [LinkedIn](https://www.linkedin.com/in/erica-mello-dev/)
 - Email: ericapmello@outlook.com
 
 ---

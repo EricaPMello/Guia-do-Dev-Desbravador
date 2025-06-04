@@ -13,6 +13,7 @@ Este repositório nasceu da minha própria busca por tornar o aprendizado em tec
 Por isso, criei este material pensando em simplificar, organizar e traduzir esses conteúdos de uma forma mais leve, visual e prática — do jeito que eu gostaria de ter encontrado quando comecei! Meu objetivo é ajudar outras pessoas que, assim como eu, sentem dificuldade em reter e compreender tantos detalhes técnicos de forma rápida. 
 
 Se este projeto ajudar você a entender melhor, perder o medo ou se sentir mais confiante para seguir aprendendo, já terá cumprido seu propósito. Sinta-se à vontade para usar, adaptar, compartilhar ou dar sugestões — a ideia é crescer junto e tornar o caminho do aprendizado em tecnologia cada vez menos solitário e mais acolhedor.
+
 ---
 
 ## Tecnologias utilizadas

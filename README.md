@@ -1,47 +1,39 @@
 # Guia do Dev Desbravador 🚀
 
-Bem-vindo(a) ao meu repositório!  
-Aqui compartilho um pouco da minha jornada e aprendizados como estudante de Sistemas de Informação e entusiasta de tecnologia, dados e desenvolvimento ágil.
+Bem-vindo(a) ao meu repositório!
 
----
-
-## Sobre Mim
-
-👩‍💻 **Erica Pereira de Mello**  
-Estagiária em Tecnologia no Itaú Unibanco | Aspirante a Engenheira de Dados  
-Apaixonada por Análise de Dados, Inovação e Novos Desafios
-
-- 7º semestre de Sistemas de Informação
-- Experiência prévia de 12 anos na área comercial, desenvolvendo visão de negócios e habilidades interpessoais diferenciadas
-- Em transição de carreira, unindo bagagem comercial e novas habilidades técnicas para entregar soluções completas e inovadoras
+Aqui você encontra um dos meus primeiros projetos práticos em desenvolvimento web, criado com foco em aprendizado, organização de ideias e compartilhamento de conhecimento com outros estudantes e entusiastas da área de tecnologia.
 
 ---
 
 ## Sobre o Projeto
 
-Este repositório foi criado como parte do meu aprendizado em HTML5 & CSS3 — fruto de cursos, estudos práticos e muita curiosidade!  
-Aqui você encontra exemplos de código, dicas e um pouco do meu olhar sobre o mundo do desenvolvimento web.
-
-**Principais tecnologias utilizadas:**
-- HTML5 e CSS3
-- Noções de Python, SQL, Java, Power BI, Tableau e metodologias ágeis
+Este repositório contém uma página desenvolvida em **HTML5** e **CSS3** como parte da minha trajetória de estudos em tecnologia. O objetivo é servir como portfólio, exercício prático e fonte de inspiração para quem está começando ou deseja revisitar conceitos fundamentais de construção de páginas web.
 
 ---
 
-## Meus Valores
+## Tecnologias utilizadas
 
-- Trabalho em equipe e colaboração
-- Resolução de problemas com criatividade e empatia
-- Comunicação clara e objetiva
-- Busca constante por aprendizado e inovação
+- HTML5
+- CSS3
+
+---
+
+## Sobre mim
+
+Meu nome é **Erica Pereira de Mello** e estou em transição de carreira para a área de **análise e ciência de dados**. Atualmente curso o 7º semestre de Sistemas de Informação e atuo como estagiária de tecnologia no Itaú Unibanco, onde aplico diariamente meus conhecimentos e busco me aperfeiçoar em um ambiente dinâmico e inovador.
+
+Após mais de uma década trabalhando no setor comercial, desenvolvi habilidades de comunicação, trabalho em equipe e foco na resolução de problemas. Agora, trago essa bagagem para o universo de dados, unindo visão de negócios com o poder da tecnologia para entregar soluções relevantes.
+
+Sou movida por desafios, aprendizado contínuo e pelo desejo de compartilhar o que aprendo. Acredito que conhecimento só faz sentido quando compartilhado — por isso, este repositório está aberto a sugestões, dúvidas e trocas de experiência!
 
 ---
 
 ## Como navegar neste repositório
 
-- O código está organizado e revisado para facilitar compreensão e reutilização
-- Comentários e dicas foram incluídos para ajudar estudantes e entusiastas
-- Sinta-se à vontade para sugerir melhorias, apontar dúvidas ou apenas trocar uma ideia!
+- O código está revisado, limpo e comentado para facilitar a compreensão.
+- Sinta-se à vontade para explorar, sugerir melhorias, apontar dúvidas ou simplesmente trocar ideias!
+- Se este material te ajudar de alguma forma, compartilhe comigo — vou adorar saber 😊
 
 ---
 
@@ -52,5 +44,4 @@ Aqui você encontra exemplos de código, dicas e um pouco do meu olhar sobre o m
 
 ---
 
-**Obrigada por visitar!**  
-Se este material te ajudar de alguma forma, ficarei feliz em saber 😉  
+**Obrigada por visitar!**

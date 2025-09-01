@@ -29,7 +29,7 @@ jobs:
       # Passo 1: Fazer checkout do código do seu repositório
       # Esta action baixa o código do seu repositório para a máquina virtual
       - name: Checkout do código
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       # Passo 2: Configurar ambiente Ruby e instalar dependências do Gemfile (se existir)
       # Esta action configura a versão especificada do Ruby e utiliza o cache do Bundler

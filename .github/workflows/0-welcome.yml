@@ -51,7 +51,7 @@ jobs:
       # Esta action faz o upload do diretório do site construído (./site) como um artefato.
       # Este artefato será usado pelo job de deploy.
       - name: Fazer upload do artefato do site
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./site # Caminho para o diretório que contém os arquivos do site construído
 

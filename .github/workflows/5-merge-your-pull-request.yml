@@ -26,7 +26,7 @@ jobs:
     steps:
       # Passo 1: Fazer checkout do código do repositório
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       # Passo 2: Ler o arquivo de passo e definir a saída
       - id: get_step # ID para referenciar a saída deste passo
@@ -68,7 +68,7 @@ jobs:
     steps:
       # Passo 1: Fazer checkout do código
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0 # Busca todo o histórico de commits, útil para algumas actions.
 
